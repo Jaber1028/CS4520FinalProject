@@ -19,6 +19,16 @@
 		1B089AD02A423FDE00F5DD5C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 1B089ACF2A423FDE00F5DD5C /* FirebaseFirestore */; };
 		1B089AD22A423FDE00F5DD5C /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1B089AD12A423FDE00F5DD5C /* FirebaseFirestoreSwift */; };
 		1B089AD42A423FDE00F5DD5C /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 1B089AD32A423FDE00F5DD5C /* FirebaseStorage */; };
+		1B089AD62A42443F00F5DD5C /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B089AD52A42443F00F5DD5C /* MainScreenView.swift */; };
+		1B089AD82A4245F100F5DD5C /* RightBarButtonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B089AD72A4245F100F5DD5C /* RightBarButtonManager.swift */; };
+		1B089AF12A4247D000F5DD5C /* ProgressSpinnerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B089AEF2A4247D000F5DD5C /* ProgressSpinnerDelegate.swift */; };
+		1B089AF22A4247D000F5DD5C /* ProgressSpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B089AF02A4247D000F5DD5C /* ProgressSpinnerViewController.swift */; };
+		1B089AF72A42491000F5DD5C /* RegisterProgressSpinnerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B089AF62A42491000F5DD5C /* RegisterProgressSpinnerManager.swift */; };
+		1B089AFD2A424AB000F5DD5C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B089AFC2A424AB000F5DD5C /* RegisterViewController.swift */; };
+		1B089AFF2A424AE900F5DD5C /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B089AFE2A424AE900F5DD5C /* RegisterView.swift */; };
+		1B089B012A424B2E00F5DD5C /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B089B002A424B2E00F5DD5C /* AlertController.swift */; };
+		1B089B032A424B6900F5DD5C /* RegisterFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B089B022A424B6900F5DD5C /* RegisterFirebaseManager.swift */; };
+		1B089B052A424BBF00F5DD5C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B089B042A424BBF00F5DD5C /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +41,18 @@
 		1B089AC02A423EB300F5DD5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B089AC22A423EB300F5DD5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B089AC82A423F7D00F5DD5C /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		1B089AD52A42443F00F5DD5C /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
+		1B089AD72A4245F100F5DD5C /* RightBarButtonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightBarButtonManager.swift; sourceTree = "<group>"; };
+		1B089AEF2A4247D000F5DD5C /* ProgressSpinnerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProgressSpinnerDelegate.swift; path = "../../../WA8_Lin_9675/WA8_Lin_9675 2/WA8_Lin_9675/ProgressSpinner/ProgressSpinnerDelegate.swift"; sourceTree = "<group>"; };
+		1B089AF02A4247D000F5DD5C /* ProgressSpinnerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProgressSpinnerViewController.swift; path = "../../../WA8_Lin_9675/WA8_Lin_9675 2/WA8_Lin_9675/ProgressSpinner/ProgressSpinnerViewController.swift"; sourceTree = "<group>"; };
+		1B089AF42A4247D500F5DD5C /* ProgressSpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressSpinnerViewController.swift; sourceTree = "<group>"; };
+		1B089AF52A4247D500F5DD5C /* ProgressSpinnerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressSpinnerDelegate.swift; sourceTree = "<group>"; };
+		1B089AF62A42491000F5DD5C /* RegisterProgressSpinnerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProgressSpinnerManager.swift; sourceTree = "<group>"; };
+		1B089AFC2A424AB000F5DD5C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		1B089AFE2A424AE900F5DD5C /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		1B089B002A424B2E00F5DD5C /* AlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertController.swift; path = "../../../WA8_Lin_9675/WA8_Lin_9675 2/WA8_Lin_9675/AlertController.swift"; sourceTree = "<group>"; };
+		1B089B022A424B6900F5DD5C /* RegisterFirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFirebaseManager.swift; sourceTree = "<group>"; };
+		1B089B042A424BBF00F5DD5C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,9 +90,15 @@
 		1B089AB32A423EAF00F5DD5C /* CS4520FinalProject */ = {
 			isa = PBXGroup;
 			children = (
+				1B089B002A424B2E00F5DD5C /* AlertController.swift */,
+				1B089AFA2A42498900F5DD5C /* DataModel */,
+				1B089AF32A4247D400F5DD5C /* ProgressSpinner */,
+				1B089AEF2A4247D000F5DD5C /* ProgressSpinnerDelegate.swift */,
+				1B089AF02A4247D000F5DD5C /* ProgressSpinnerViewController.swift */,
+				1B089AE22A42466A00F5DD5C /* RegisterScreen */,
 				1B089AB42A423EAF00F5DD5C /* AppDelegate.swift */,
 				1B089AB62A423EAF00F5DD5C /* SceneDelegate.swift */,
-				1B089AB82A423EAF00F5DD5C /* ViewController.swift */,
+				1B089AD92A42463100F5DD5C /* MainScreen */,
 				1B089ABA2A423EAF00F5DD5C /* Main.storyboard */,
 				1B089ABD2A423EB300F5DD5C /* Assets.xcassets */,
 				1B089ABF2A423EB300F5DD5C /* LaunchScreen.storyboard */,
@@ -78,6 +106,60 @@
 				1B089AC82A423F7D00F5DD5C /* GoogleService-Info.plist */,
 			);
 			path = CS4520FinalProject;
+			sourceTree = "<group>";
+		};
+		1B089AD92A42463100F5DD5C /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				1B089AEC2A42469F00F5DD5C /* View */,
+				1B089AB82A423EAF00F5DD5C /* ViewController.swift */,
+				1B089AD72A4245F100F5DD5C /* RightBarButtonManager.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		1B089AE22A42466A00F5DD5C /* RegisterScreen */ = {
+			isa = PBXGroup;
+			children = (
+				1B089AEA2A42469600F5DD5C /* View */,
+				1B089AF62A42491000F5DD5C /* RegisterProgressSpinnerManager.swift */,
+				1B089AFC2A424AB000F5DD5C /* RegisterViewController.swift */,
+				1B089B022A424B6900F5DD5C /* RegisterFirebaseManager.swift */,
+			);
+			path = RegisterScreen;
+			sourceTree = "<group>";
+		};
+		1B089AEA2A42469600F5DD5C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1B089AFE2A424AE900F5DD5C /* RegisterView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1B089AEC2A42469F00F5DD5C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1B089AD52A42443F00F5DD5C /* MainScreenView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1B089AF32A4247D400F5DD5C /* ProgressSpinner */ = {
+			isa = PBXGroup;
+			children = (
+				1B089AF52A4247D500F5DD5C /* ProgressSpinnerDelegate.swift */,
+				1B089AF42A4247D500F5DD5C /* ProgressSpinnerViewController.swift */,
+			);
+			path = ProgressSpinner;
+			sourceTree = "<group>";
+		};
+		1B089AFA2A42498900F5DD5C /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				1B089B042A424BBF00F5DD5C /* User.swift */,
+			);
+			path = DataModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,9 +244,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B089B052A424BBF00F5DD5C /* User.swift in Sources */,
+				1B089AFD2A424AB000F5DD5C /* RegisterViewController.swift in Sources */,
+				1B089B032A424B6900F5DD5C /* RegisterFirebaseManager.swift in Sources */,
+				1B089AFF2A424AE900F5DD5C /* RegisterView.swift in Sources */,
 				1B089AB92A423EAF00F5DD5C /* ViewController.swift in Sources */,
+				1B089AF22A4247D000F5DD5C /* ProgressSpinnerViewController.swift in Sources */,
+				1B089AD82A4245F100F5DD5C /* RightBarButtonManager.swift in Sources */,
+				1B089AF72A42491000F5DD5C /* RegisterProgressSpinnerManager.swift in Sources */,
 				1B089AB52A423EAF00F5DD5C /* AppDelegate.swift in Sources */,
 				1B089AB72A423EAF00F5DD5C /* SceneDelegate.swift in Sources */,
+				1B089B012A424B2E00F5DD5C /* AlertController.swift in Sources */,
+				1B089AD62A42443F00F5DD5C /* MainScreenView.swift in Sources */,
+				1B089AF12A4247D000F5DD5C /* ProgressSpinnerDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
