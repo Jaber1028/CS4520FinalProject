@@ -10,6 +10,7 @@ import UIKit
 class RegisterView: UIView {
     var textFieldName: UITextField!
     var textFieldEmail: UITextField!
+    var textFieldAge: UITextField!
     var textFieldPassword: UITextField!
     var textFieldPasswordConfirm: UITextField!
     var buttonRegister: UIButton!
@@ -17,15 +18,16 @@ class RegisterView: UIView {
     override init(frame: CGRect){
         super.init(frame: frame)
         self.backgroundColor = .white
-        setuptextFieldName()
-        setuptextFieldEmail()
-        setuptextFieldPassword()
-        setuptextFieldPasswordConfirm()
-        setupbuttonRegister()
+        setupTextFieldName()
+        setupTextFieldEmail()
+        setupTextAge()
+        setupTextFieldPassword()
+        setupTextFieldPasswordConfirm()
+        setupButtonRegister()
         initConstraints()
     }
     
-    func setuptextFieldName(){
+    func setupTextFieldName(){
         textFieldName = UITextField()
         textFieldName.placeholder = "Name"
         textFieldName.keyboardType = .default
@@ -34,7 +36,7 @@ class RegisterView: UIView {
         self.addSubview(textFieldName)
     }
     
-    func setuptextFieldEmail(){
+    func setupTextFieldEmail(){
         textFieldEmail = UITextField()
         textFieldEmail.placeholder = "Email"
         textFieldEmail.keyboardType = .emailAddress
@@ -43,7 +45,16 @@ class RegisterView: UIView {
         self.addSubview(textFieldEmail)
     }
     
-    func setuptextFieldPassword(){
+    func setupTextAge(){
+        textFieldAge = UITextField()
+        textFieldAge.placeholder = "Age"
+        textFieldAge.keyboardType = .numberPad
+        textFieldAge.borderStyle = .roundedRect
+        textFieldAge.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(textFieldAge)
+    }
+    
+    func setupTextFieldPassword(){
         textFieldPassword = UITextField()
         textFieldPassword.placeholder = "Password"
         textFieldPassword.textContentType = .password
@@ -54,7 +65,7 @@ class RegisterView: UIView {
         self.addSubview(textFieldPassword)
     }
     
-    func setuptextFieldPasswordConfirm(){
+    func setupTextFieldPasswordConfirm(){
         textFieldPasswordConfirm = UITextField()
         textFieldPasswordConfirm.placeholder = "Confirm Password"
         textFieldPasswordConfirm.textContentType = .password
@@ -65,7 +76,7 @@ class RegisterView: UIView {
         self.addSubview(textFieldPasswordConfirm)
     }
     
-    func setupbuttonRegister(){
+    func setupButtonRegister(){
         buttonRegister = UIButton(type: .system)
         buttonRegister.setTitle("Register", for: .normal)
         buttonRegister.titleLabel?.font = .boldSystemFont(ofSize: 16)
@@ -83,7 +94,11 @@ class RegisterView: UIView {
             textFieldEmail.centerXAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerXAnchor),
             textFieldEmail.widthAnchor.constraint(equalTo: self.safeAreaLayoutGuide.widthAnchor, multiplier: 0.9),
             
-            textFieldPassword.topAnchor.constraint(equalTo: textFieldEmail.bottomAnchor, constant: 16),
+            textFieldAge.topAnchor.constraint(equalTo: textFieldEmail.bottomAnchor, constant: 16),
+            textFieldAge.centerXAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerXAnchor),
+            textFieldAge.widthAnchor.constraint(equalTo: self.safeAreaLayoutGuide.widthAnchor, multiplier: 0.9),
+            
+            textFieldPassword.topAnchor.constraint(equalTo: textFieldAge.bottomAnchor, constant: 16),
             textFieldPassword.centerXAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerXAnchor),
             textFieldPassword.widthAnchor.constraint(equalTo: self.safeAreaLayoutGuide.widthAnchor, multiplier: 0.9),
             

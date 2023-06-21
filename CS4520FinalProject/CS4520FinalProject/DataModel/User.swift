@@ -1,8 +1,8 @@
 //
 //  User.swift
-//  App12
+//  CS4520FinalProject
 //
-//  Created by Sakib Miazi on 6/2/23.
+//  Created by Kenny Lin on 6/21/23.
 //
 
 import Foundation
@@ -12,9 +12,12 @@ struct User: Codable{
     @DocumentID var id: String?
     var name: String
     var email: String
+    var age: Int
     
-    init(name: String, email: String) {
+    init(id: String? = nil, name: String, email: String, age: Int) {
+        self.id = id
         self.name = name
         self.email = email
+        self.age = age
     }
 }

@@ -19,10 +19,10 @@ extension ViewController{
                 action: #selector(onLogOutBarButtonTapped)
             )
             
-//            let addMessage = UIBarButtonItem(image: UIImage(systemName: "square.and.pencil"), style: .plain, target: self, action: #selector(addMessageButtonAction))
+            let addFriend = UIBarButtonItem(image: UIImage(systemName: "person.2.fill"), style: .plain, target: self, action: #selector(addFriendButtonAction))
             
-         //   navigationItem.rightBarButtonItem = addMessage
-            navigationItem.leftBarButtonItem = barText
+            navigationItem.leftBarButtonItem = addFriend
+            navigationItem.rightBarButtonItem = barText
             
         }else{
             //MARK: not logged in...
@@ -36,6 +36,12 @@ extension ViewController{
             navigationItem.leftBarButtonItem = nil
             navigationItem.rightBarButtonItem = barText
         }
+    }
+    
+    @objc func addFriendButtonAction() {
+        let friendListViewController = FriendListViewController()
+        friendListViewController.delegate = self
+        navigationController?.pushViewController(friendListViewController, animated: true)
     }
     
     @objc func onSignInBarButtonTapped(){
@@ -119,7 +125,7 @@ extension ViewController{
             if error == nil{
                 print("Logged in: \(email)")
             }else {
-               // AlertController().alertCustom(text: "Check credentials again", self)
+                AlertController().alertCustom(text: "Check credentials again", self)
             }
             
         })

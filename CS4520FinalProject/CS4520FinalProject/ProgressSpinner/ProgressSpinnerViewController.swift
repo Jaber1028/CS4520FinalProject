@@ -1,8 +1,8 @@
 //
 //  ProgressSpinnerViewController.swift
-//  App12
+//  CS4520FinalProject
 //
-//  Created by Sakib Miazi on 6/2/23.
+//  Created by Kenny Lin on 6/21/23.
 //
 
 import UIKit

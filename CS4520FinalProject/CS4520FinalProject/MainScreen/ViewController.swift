@@ -18,13 +18,28 @@ class ViewController: UIViewController {
     
     var handleAuth: AuthStateDidChangeListenerHandle?
     
+    var currentUser: User!
+
+    
+    let database = Firestore.firestore()
+    
     override func loadView() {
         view = mainScreenView
     }
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "FitLink"
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
+        navigationController?.navigationBar.backgroundColor = .lightGray
+        
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        setNeedsStatusBarAppearanceUpdate()
         
         //MARK: handling if the Authentication state is changed (sign in, sign out, register)...
         handleAuth = Auth.auth().addStateDidChangeListener{ auth, user in
@@ -40,6 +55,8 @@ class ViewController: UIViewController {
                 //MARK: the user is signed in...
                 self.currentAuthUser = user
                 
+                self.currentUser = self.getUserDetail(email: (self.currentAuthUser?.email)!)
+                
                 self.mainScreenView.labelText.text = "Welcome \(user?.displayName ?? "Anonymous")!"
 
                 //MARK: Logout bar button...
@@ -47,11 +64,6 @@ class ViewController: UIViewController {
                 
             }
         }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        title = "FitLink"
     }
 
 }
