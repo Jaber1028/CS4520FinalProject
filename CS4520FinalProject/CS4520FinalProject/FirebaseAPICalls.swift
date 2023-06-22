@@ -37,19 +37,26 @@ extension FriendListViewController {
         let collectionFriend = self.delegate.database
             .collection("user").document((delegate.currentAuthUser?.email)!).collection("friend")
         
-        
-        let user = delegate.getUserDetail(email: email)
-        if user != nil {
-            collectionFriend.addDocument(data: ["name": user!.name,
-                                                "email": user!.email,
-                                                "age": user!.age])
-        } else {
-            print("Friend not found")
-        }
-
-        self.getAllFriends()
+        self.delegate.database.collection("user").addSnapshotListener(includeMetadataChanges: false, listener: {querySnapshot, error in
+            if let documents = querySnapshot?.documents{
+                for document in documents{
+                    do{
+                        let user = try document.data(as: User.self)
+                        
+                        if user.email.lowercased() == email.lowercased() {
+                            collectionFriend.addDocument(data: ["name": user.name,
+                                                                "email": user.email,
+                                                                "age": user.age])
+                        }
+                        self.getAllFriends()
+                        
+                    } catch {
+                        print(error)
+                    }
+                }
+            }
+        })
     }
-    
     
 }
 
@@ -61,7 +68,7 @@ extension ViewController {
                 for document in documents{
                     do{
                         let user = try document.data(as: User.self)
-                        print(user)
+                        
                         if user.email.lowercased() == email.lowercased() {
                             foundUser = user
                         }
@@ -72,6 +79,7 @@ extension ViewController {
                 }
             }
         })
+
         return foundUser
     }
 }
