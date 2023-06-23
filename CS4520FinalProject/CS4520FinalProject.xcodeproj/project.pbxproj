@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		162ED23C2A4630FA00FD9245 /* PhotoManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162ED23B2A4630FA00FD9245 /* PhotoManagerViewController.swift */; };
 		1B089AB52A423EAF00F5DD5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B089AB42A423EAF00F5DD5C /* AppDelegate.swift */; };
 		1B089AB72A423EAF00F5DD5C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B089AB62A423EAF00F5DD5C /* SceneDelegate.swift */; };
 		1B089AB92A423EAF00F5DD5C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B089AB82A423EAF00F5DD5C /* ViewController.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		162ED23B2A4630FA00FD9245 /* PhotoManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoManagerViewController.swift; sourceTree = "<group>"; };
 		1B089AB12A423EAF00F5DD5C /* CS4520FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CS4520FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B089AB42A423EAF00F5DD5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B089AB62A423EAF00F5DD5C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,23 +112,23 @@
 		1B089AB32A423EAF00F5DD5C /* CS4520FinalProject */ = {
 			isa = PBXGroup;
 			children = (
+				1B089AC82A423F7D00F5DD5C /* GoogleService-Info.plist */,
+				1B089AC22A423EB300F5DD5C /* Info.plist */,
+				1B089ABF2A423EB300F5DD5C /* LaunchScreen.storyboard */,
+				1B089ABD2A423EB300F5DD5C /* Assets.xcassets */,
+				1B089ABA2A423EAF00F5DD5C /* Main.storyboard */,
+				1B089AB62A423EAF00F5DD5C /* SceneDelegate.swift */,
+				1B089AB42A423EAF00F5DD5C /* AppDelegate.swift */,
+				1B089B182A4377A100F5DD5C /* Configs.swift */,
+				1B089B262A45EDFD00F5DD5C /* ImageViewUtils.swift */,
+				1B089B2D2A4625CB00F5DD5C /* AlertController.swift */,
+				1B089B062A43638E00F5DD5C /* FirebaseAPICalls.swift */,
 				1B089AFA2A42498900F5DD5C /* DataModel */,
 				1B089AF32A4247D400F5DD5C /* ProgressSpinner */,
 				1B089AE22A42466A00F5DD5C /* RegisterScreen */,
-				1B089AD92A42463100F5DD5C /* MainScreen */,
-				1B089AB42A423EAF00F5DD5C /* AppDelegate.swift */,
-				1B089AB62A423EAF00F5DD5C /* SceneDelegate.swift */,
-				1B089ABA2A423EAF00F5DD5C /* Main.storyboard */,
-				1B089ABD2A423EB300F5DD5C /* Assets.xcassets */,
-				1B089ABF2A423EB300F5DD5C /* LaunchScreen.storyboard */,
-				1B089AC22A423EB300F5DD5C /* Info.plist */,
-				1B089AC82A423F7D00F5DD5C /* GoogleService-Info.plist */,
-				1B089B062A43638E00F5DD5C /* FirebaseAPICalls.swift */,
 				1B089B142A4376D500F5DD5C /* FriendListScreen */,
-				1B089B182A4377A100F5DD5C /* Configs.swift */,
-				1B089B262A45EDFD00F5DD5C /* ImageViewUtils.swift */,
 				1B089B2C2A46008B00F5DD5C /* ProfileScreen */,
-				1B089B2D2A4625CB00F5DD5C /* AlertController.swift */,
+				1B089AD92A42463100F5DD5C /* MainScreen */,
 			);
 			path = CS4520FinalProject;
 			sourceTree = "<group>";
@@ -211,6 +213,7 @@
 			children = (
 				1B089B282A46007300F5DD5C /* ProfileViewController.swift */,
 				1B089B2A2A46008300F5DD5C /* ProfileScreenView.swift */,
+				162ED23B2A4630FA00FD9245 /* PhotoManagerViewController.swift */,
 			);
 			path = ProfileScreen;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				1B089B0F2A43765700F5DD5C /* Comment.swift in Sources */,
 				1B089AB52A423EAF00F5DD5C /* AppDelegate.swift in Sources */,
 				1B089B292A46007400F5DD5C /* ProfileViewController.swift in Sources */,
+				162ED23C2A4630FA00FD9245 /* PhotoManagerViewController.swift in Sources */,
 				1B089B112A4376C300F5DD5C /* FriendListView.swift in Sources */,
 				1B089AB72A423EAF00F5DD5C /* SceneDelegate.swift in Sources */,
 				1B089B1B2A43786200F5DD5C /* FriendTableViewController.swift in Sources */,
