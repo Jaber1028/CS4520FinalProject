@@ -9,6 +9,7 @@ import UIKit
 
 class MainScreenView: UIView {
     
+    var postTableView : UITableView!
     var labelText : UILabel!
     
     var buttonProfile : UIButton!
@@ -17,9 +18,17 @@ class MainScreenView: UIView {
         super.init(frame: frame)
         self.backgroundColor = .white
         
+        setupPostTableView()
         setupLabelText()
         setupButtonProfile()
         initConstraints()
+    }
+    
+    func setupPostTableView() {
+        postTableView = UITableView()
+        postTableView.register(PostTableViewCell.self, forCellReuseIdentifier: Configs.tableViewFriendsID)
+        postTableView.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(postTableView)
     }
     
     func setupLabelText() {

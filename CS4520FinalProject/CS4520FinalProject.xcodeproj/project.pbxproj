@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		162ED23C2A4630FA00FD9245 /* PhotoManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162ED23B2A4630FA00FD9245 /* PhotoManagerViewController.swift */; };
+		162ED23E2A4638AE00FD9245 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162ED23D2A4638AE00FD9245 /* PostTableViewCell.swift */; };
+		162ED2402A46399400FD9245 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162ED23F2A46399400FD9245 /* MainTableViewController.swift */; };
 		1B089AB52A423EAF00F5DD5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B089AB42A423EAF00F5DD5C /* AppDelegate.swift */; };
 		1B089AB72A423EAF00F5DD5C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B089AB62A423EAF00F5DD5C /* SceneDelegate.swift */; };
 		1B089AB92A423EAF00F5DD5C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B089AB82A423EAF00F5DD5C /* ViewController.swift */; };
@@ -45,6 +47,8 @@
 
 /* Begin PBXFileReference section */
 		162ED23B2A4630FA00FD9245 /* PhotoManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoManagerViewController.swift; sourceTree = "<group>"; };
+		162ED23D2A4638AE00FD9245 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		162ED23F2A46399400FD9245 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		1B089AB12A423EAF00F5DD5C /* CS4520FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CS4520FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B089AB42A423EAF00F5DD5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B089AB62A423EAF00F5DD5C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 				1B089AEC2A42469F00F5DD5C /* View */,
 				1B089AB82A423EAF00F5DD5C /* ViewController.swift */,
 				1B089AD72A4245F100F5DD5C /* RightBarButtonManager.swift */,
+				162ED23F2A46399400FD9245 /* MainTableViewController.swift */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
@@ -166,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				1B089AD52A42443F00F5DD5C /* MainScreenView.swift */,
+				162ED23D2A4638AE00FD9245 /* PostTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -304,6 +310,7 @@
 				1B089AFD2A424AB000F5DD5C /* RegisterViewController.swift in Sources */,
 				1B089B132A4376D000F5DD5C /* FriendListViewController.swift in Sources */,
 				1B089AFF2A424AE900F5DD5C /* RegisterView.swift in Sources */,
+				162ED2402A46399400FD9245 /* MainTableViewController.swift in Sources */,
 				1B089B2E2A4625CB00F5DD5C /* AlertController.swift in Sources */,
 				1B089B252A45EB3500F5DD5C /* RegisterPhotoManager.swift in Sources */,
 				1B089B192A4377A100F5DD5C /* Configs.swift in Sources */,
@@ -315,6 +322,7 @@
 				1B089B0D2A4375BE00F5DD5C /* Post.swift in Sources */,
 				1B089B072A43638E00F5DD5C /* FirebaseAPICalls.swift in Sources */,
 				1B089B0F2A43765700F5DD5C /* Comment.swift in Sources */,
+				162ED23E2A4638AE00FD9245 /* PostTableViewCell.swift in Sources */,
 				1B089AB52A423EAF00F5DD5C /* AppDelegate.swift in Sources */,
 				1B089B292A46007400F5DD5C /* ProfileViewController.swift in Sources */,
 				162ED23C2A4630FA00FD9245 /* PhotoManagerViewController.swift in Sources */,

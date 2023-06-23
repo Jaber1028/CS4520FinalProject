@@ -22,6 +22,8 @@ class ViewController: UIViewController {
     
     let database = Firestore.firestore()
     
+    let posts = [Post]()
+    
     override func loadView() {
         view = mainScreenView
     }
@@ -31,6 +33,8 @@ class ViewController: UIViewController {
         title = "FitLink"
         
        // mainScreenView.bringSubviewToFront(mainScreenView.buttonProfile)
+        mainScreenView.postTableView.delegate = self
+        mainScreenView.postTableView.dataSource = self
         
         navigationController?.navigationBar.prefersLargeTitles = true
         
