@@ -46,7 +46,8 @@ extension FriendListViewController {
                         if user.email.lowercased() == email.lowercased() {
                             collectionFriend.addDocument(data: ["name": user.name,
                                                                 "email": user.email,
-                                                                "age": user.age])
+                                                                "age": user.age,
+                                                                "photo": user.photo?.absoluteString])
                         }
                         self.getAllFriends()
                         
@@ -61,8 +62,7 @@ extension FriendListViewController {
 }
 
 extension ViewController {
-    func getUserDetail(email: String) -> User? {
-        var foundUser: User?
+    func getUserDetail(email: String) {
         self.database.collection("user").addSnapshotListener(includeMetadataChanges: false, listener: {querySnapshot, error in
             if let documents = querySnapshot?.documents{
                 for document in documents{
@@ -70,7 +70,7 @@ extension ViewController {
                         let user = try document.data(as: User.self)
                         
                         if user.email.lowercased() == email.lowercased() {
-                            foundUser = user
+                            self.currentUser = user
                         }
                         
                     } catch {
@@ -79,29 +79,27 @@ extension ViewController {
                 }
             }
         })
-
-        return foundUser
     }
 }
 
 
 extension RegisterViewController{
     
-    func registerNewAccount(){
+    func registerNewAccount(photoURL: URL?){
         //MARK: display the progress indicator...
         showActivityIndicator()
         //MARK: create a Firebase user with email and password...
-        if let name = self.registerView.textFieldName.text,
-           let email = self.registerView.textFieldEmail.text,
-           let age = self.registerView.textFieldAge.text,
-           let password = self.registerView.textFieldPassword.text{
+        if let name = registerView.textFieldName.text,
+           let email = registerView.textFieldEmail.text,
+           let age = registerView.textFieldAge.text,
+           let password = registerView.textFieldPassword.text {
             
-            let newUser = User(name: name, email: email, age: Int(age)!)
+            let newUser = User(name: name, email: email, age: Int(age)!, photo: photoURL)
             //Validations....
             Auth.auth().createUser(withEmail: email, password: password, completion: {result, error in
                 if error == nil{
                     //MARK: the user creation is successful...
-                    self.setNameOfTheUserInFirebaseAuth(name: name)
+                    self.setNameOfTheUserInFirebaseAuth(name: name, photoURL: photoURL)
                     self.addNewUserInFirebase(newUser: newUser)
                 }
                 else {
@@ -113,9 +111,11 @@ extension RegisterViewController{
     }
     
     //MARK: We set the name of the user after we create the account...
-    func setNameOfTheUserInFirebaseAuth(name: String){
+    func setNameOfTheUserInFirebaseAuth(name: String, photoURL: URL?){
         let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
         changeRequest?.displayName = name
+        changeRequest?.photoURL = photoURL
+        
         changeRequest?.commitChanges(completion: {(error) in
             if error == nil{
                 //MARK: the profile update is successful...
@@ -138,7 +138,8 @@ extension RegisterViewController{
         
         collectionUsers.setData(["name": newUser.name,
                                  "email": newUser.email,
-                                 "age": newUser.age])
+                                 "age": newUser.age,
+                                 "photo" : newUser.photo?.absoluteString])
 
     }
 }

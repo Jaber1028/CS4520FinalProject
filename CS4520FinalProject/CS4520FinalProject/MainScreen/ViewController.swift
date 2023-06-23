@@ -19,7 +19,6 @@ class ViewController: UIViewController {
     var handleAuth: AuthStateDidChangeListenerHandle?
     
     var currentUser: User!
-
     
     let database = Firestore.firestore()
     
@@ -30,6 +29,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "FitLink"
+        
+       // mainScreenView.bringSubviewToFront(mainScreenView.buttonProfile)
         
         navigationController?.navigationBar.prefersLargeTitles = true
         
@@ -46,6 +47,8 @@ class ViewController: UIViewController {
             if user == nil{
                 //MARK: not signed in...
                 self.currentAuthUser = nil
+                self.currentUser = nil
+                
                 self.mainScreenView.labelText.text = "Please sign in to see the messages!"
 
                 //MARK: Sign in bar button...
@@ -54,8 +57,7 @@ class ViewController: UIViewController {
             }else{
                 //MARK: the user is signed in...
                 self.currentAuthUser = user
-                
-                self.currentUser = self.getUserDetail(email: (self.currentAuthUser?.email)!)
+                self.getUserDetail(email: (self.currentAuthUser?.email)!)
                 
                 self.mainScreenView.labelText.text = "Welcome \(user?.displayName ?? "Anonymous")!"
 

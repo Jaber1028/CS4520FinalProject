@@ -11,14 +11,14 @@ class MainScreenView: UIView {
     
     var labelText : UILabel!
     
-    //var buttonFriendsList : UIButton!
+    var buttonProfile : UIButton!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .white
         
         setupLabelText()
-       // setupButtonFriendsList()
+        setupButtonProfile()
         initConstraints()
     }
     
@@ -29,15 +29,17 @@ class MainScreenView: UIView {
         self.addSubview(labelText)
     }
     
-//    func setupButtonFriendsList() {
-//        buttonFriendsList = UIButton(type: .system)
-//        buttonFriendsList.setTitle("Friends List", for: .normal)
-//        buttonFriendsList.titleLabel?.textColor = .blue
-//        buttonFriendsList.setImage(UIImage(systemName: "person.3.sequence"), for: .normal)
-//
-//        buttonFriendsList.translatesAutoresizingMaskIntoConstraints = false
-//        self.addSubview(buttonFriendsList)
-//    }
+    func setupButtonProfile() {
+        buttonProfile = UIButton(type: .custom)
+        buttonProfile.contentMode = .scaleToFill
+        buttonProfile.contentHorizontalAlignment = .fill
+        buttonProfile.contentVerticalAlignment = .fill
+        buttonProfile.layer.cornerRadius = 0.5 * buttonProfile.bounds.size.width
+        buttonProfile.clipsToBounds = true
+        buttonProfile.showsMenuAsPrimaryAction = true
+        buttonProfile.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(buttonProfile)
+    }
     
     func initConstraints(){
         NSLayoutConstraint.activate([
@@ -45,9 +47,10 @@ class MainScreenView: UIView {
             labelText.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 16),
             labelText.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -16),
             
-//            buttonFriendsList.topAnchor.constraint(equalTo: self.labelText.bottomAnchor, constant: 16),
-//            buttonFriendsList.leadingAnchor.constraint(equalTo: self.labelText.leadingAnchor),
-//            buttonFriendsList.heightAnchor.constraint(equalToConstant: 50)
+//            buttonProfile.topAnchor.constraint(equalTo: self.topAnchor, constant: 50),
+//            buttonProfile.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -50),
+            buttonProfile.heightAnchor.constraint(equalToConstant: 30),
+            buttonProfile.widthAnchor.constraint(equalToConstant: 30),
         ])
     }
     

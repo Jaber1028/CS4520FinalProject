@@ -72,9 +72,9 @@ class FriendTableViewCell: UITableViewCell {
     
     func setupImageProfile() {
         imageProfile = UIImageView()
-        //imageProfile.frame = CGRect(x: 160, y: 100, width: 50, height: 50)
+        imageProfile.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
         imageProfile.contentMode = .scaleToFill
-        //imageProfile.layer.cornerRadius = 0.5 * imageProfile.bounds.size.width
+        imageProfile.layer.cornerRadius = 0.5 * imageProfile.bounds.size.width
         imageProfile.clipsToBounds = true
         imageProfile.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(imageProfile)

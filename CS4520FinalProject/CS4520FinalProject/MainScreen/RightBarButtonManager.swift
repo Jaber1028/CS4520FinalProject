@@ -21,8 +21,19 @@ extension ViewController{
             
             let addFriend = UIBarButtonItem(image: UIImage(systemName: "person.2.fill"), style: .plain, target: self, action: #selector(addFriendButtonAction))
             
-            navigationItem.leftBarButtonItem = addFriend
-            navigationItem.rightBarButtonItem = barText
+            
+            if let url = self.currentAuthUser?.photoURL {
+                self.mainScreenView.buttonProfile.loadRemoteImage(from: url)
+            } else {
+                self.mainScreenView.buttonProfile.setImage(Configs.defaultPicture, for: .normal)
+            }
+            
+            mainScreenView.buttonProfile.addTarget(self, action: #selector(onProfileButtonAction), for: .touchUpInside)
+            mainScreenView.buttonProfile.frame = CGRectMake(0, 0, 25, 25);
+            let profile = UIBarButtonItem(customView: mainScreenView.buttonProfile)
+            
+            self.navigationItem.leftBarButtonItem = addFriend
+            self.navigationItem.rightBarButtonItems = [profile, barText]
             
         }else{
             //MARK: not logged in...
@@ -32,11 +43,18 @@ extension ViewController{
                 target: self,
                 action: #selector(onSignInBarButtonTapped)
             )
-            
-            navigationItem.leftBarButtonItem = nil
-            navigationItem.rightBarButtonItem = barText
+            self.navigationItem.rightBarButtonItems?.removeAll()
+            self.navigationItem.leftBarButtonItem = nil
+            self.navigationItem.rightBarButtonItem = barText
         }
     }
+    
+    @objc func onProfileButtonAction() {
+        let profileScreenController = ProfileViewController()
+        profileScreenController.delegate = self
+        navigationController?.pushViewController(profileScreenController, animated: true)
+    }
+    
     
     @objc func addFriendButtonAction() {
         let friendListViewController = FriendListViewController()

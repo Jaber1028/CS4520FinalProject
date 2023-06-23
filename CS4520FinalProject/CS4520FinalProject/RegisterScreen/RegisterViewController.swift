@@ -6,8 +6,9 @@
 //
 
 import UIKit
-import FirebaseAuth
+import PhotosUI
 import FirebaseFirestore
+import FirebaseStorage
 
 class RegisterViewController: UIViewController {
     
@@ -19,6 +20,10 @@ class RegisterViewController: UIViewController {
     
     let database = Firestore.firestore()
     
+    var pickedImage : UIImage?
+    
+    let storage = Storage.storage()
+    
     override func loadView() {
         view = registerView
     }
@@ -28,6 +33,8 @@ class RegisterViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         registerView.buttonRegister.addTarget(self, action: #selector(onRegisterTapped), for: .touchUpInside)
         title = "Register"
+        
+        registerView.buttonTakePhoto.menu = getMenuImagePicker()
     }
     
     @objc func onRegisterTapped(){
@@ -49,16 +56,52 @@ class RegisterViewController: UIViewController {
                 AlertController().alertCustom(text: "Passwords do not match", self)
             } else {
                 //MARK: creating a new user on Firebase...
-                
-                registerNewAccount()
+                showActivityIndicator()
+                uploadProfilePhotoToStorage()
             }
         }
         
         func isValidEmail(_ email: String) -> Bool {
             let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-            
+
             let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
             return emailPred.evaluate(with: email)
         }
     }
+    
+    func getMenuImagePicker() -> UIMenu{
+            let menuItems = [
+                UIAction(title: "Camera",handler: {(_) in
+                    self.pickUsingCamera()
+                }),
+                UIAction(title: "Gallery",handler: {(_) in
+                    self.pickPhotoFromGallery()
+                })
+            ]
+            
+            return UIMenu(title: "Select source", children: menuItems)
+        }
+        
+    
+    //MARK: take Photo using Camera...
+        func pickUsingCamera(){
+            let cameraController = UIImagePickerController()
+            cameraController.sourceType = .camera
+            cameraController.allowsEditing = true
+            cameraController.delegate = self
+            present(cameraController, animated: true)
+        }
+        
+        //MARK: pick Photo using Gallery...
+        func pickPhotoFromGallery(){
+            //MARK: Photo from Gallery...
+            var configuration = PHPickerConfiguration()
+            configuration.filter = PHPickerFilter.any(of: [.images])
+            configuration.selectionLimit = 1
+            
+            let photoPicker = PHPickerViewController(configuration: configuration)
+            
+            photoPicker.delegate = self
+            present(photoPicker, animated: true, completion: nil)
+        }
 }

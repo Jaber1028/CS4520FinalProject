@@ -21,8 +21,6 @@ class FriendListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        friendList.append(User(name: "Ding Dong", email: "d@gmail.com", age: 1))
-//        friendList.append(User(name: "Dawg", email: "cxcz@gmail.com", age: 20))
         
         //MARK: patching table view delegate and data source...
         friendListView.tableViewFriends.delegate = self

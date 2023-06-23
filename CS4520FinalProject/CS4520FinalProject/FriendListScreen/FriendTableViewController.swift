@@ -20,7 +20,12 @@ extension FriendListViewController: UITableViewDelegate, UITableViewDataSource{
         cell.labelName.text = friend.name
         cell.labelMessage.text = friend.email
         cell.labelDate.text = String(friend.age)
-        cell.imageProfile.image = UIImage(systemName: "person.fill")
+        
+        if let url = friend.photo {
+            cell.imageProfile.loadRemoteImage(from: url)
+        } else {
+            cell.imageProfile.image = Configs.defaultPicture
+        }
         
         return cell
     }
