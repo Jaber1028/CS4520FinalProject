@@ -143,7 +143,25 @@ extension ViewController{
             if error == nil{
                 print("Logged in: \(email)")
             }else {
-                AlertController().alertCustom(text: "Check credentials again", self)
+                                let errorAlert = UIAlertController(
+                    title: "Error",
+                    message: "Check credentials again",
+                    preferredStyle: .alert)
+                
+                //MARK: Sign In Action...
+                let okAction = UIAlertAction(title: "Ok", style: .default, handler: {(_) in
+                    self.onSignInBarButtonTapped()
+                })
+                //MARK: action buttons...
+                errorAlert.addAction(okAction)
+                
+                self.present(errorAlert, animated: true, completion: {() in
+                    //MARK: hide the alerton tap outside...
+                    errorAlert.view.superview?.isUserInteractionEnabled = true
+                    errorAlert.view.superview?.addGestureRecognizer(
+                        UITapGestureRecognizer(target: self, action: #selector(self.onTapOutsideAlert))
+                    )
+                })
             }
             
         })
