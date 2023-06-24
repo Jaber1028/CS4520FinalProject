@@ -10,6 +10,10 @@
 		162ED23C2A4630FA00FD9245 /* PhotoManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162ED23B2A4630FA00FD9245 /* PhotoManagerViewController.swift */; };
 		162ED23E2A4638AE00FD9245 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162ED23D2A4638AE00FD9245 /* PostTableViewCell.swift */; };
 		162ED2402A46399400FD9245 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162ED23F2A46399400FD9245 /* MainTableViewController.swift */; };
+		162ED2442A46A99500FD9245 /* PostScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162ED2432A46A99500FD9245 /* PostScreenView.swift */; };
+		162ED2462A46A9E300FD9245 /* PostScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162ED2452A46A9E300FD9245 /* PostScreenViewController.swift */; };
+		162ED2482A46AA5800FD9245 /* PostScreenProgressSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162ED2472A46AA5800FD9245 /* PostScreenProgressSpinner.swift */; };
+		162ED24A2A46AA8F00FD9245 /* PostScreenPhotoManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162ED2492A46AA8F00FD9245 /* PostScreenPhotoManger.swift */; };
 		1B089AB52A423EAF00F5DD5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B089AB42A423EAF00F5DD5C /* AppDelegate.swift */; };
 		1B089AB72A423EAF00F5DD5C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B089AB62A423EAF00F5DD5C /* SceneDelegate.swift */; };
 		1B089AB92A423EAF00F5DD5C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B089AB82A423EAF00F5DD5C /* ViewController.swift */; };
@@ -49,6 +53,10 @@
 		162ED23B2A4630FA00FD9245 /* PhotoManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoManagerViewController.swift; sourceTree = "<group>"; };
 		162ED23D2A4638AE00FD9245 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		162ED23F2A46399400FD9245 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		162ED2432A46A99500FD9245 /* PostScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostScreenView.swift; sourceTree = "<group>"; };
+		162ED2452A46A9E300FD9245 /* PostScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostScreenViewController.swift; sourceTree = "<group>"; };
+		162ED2472A46AA5800FD9245 /* PostScreenProgressSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostScreenProgressSpinner.swift; sourceTree = "<group>"; };
+		162ED2492A46AA8F00FD9245 /* PostScreenPhotoManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostScreenPhotoManger.swift; sourceTree = "<group>"; };
 		1B089AB12A423EAF00F5DD5C /* CS4520FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CS4520FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B089AB42A423EAF00F5DD5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B089AB62A423EAF00F5DD5C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +105,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		162ED2412A46A97100FD9245 /* PostScreen */ = {
+			isa = PBXGroup;
+			children = (
+				162ED2422A46A98400FD9245 /* View */,
+				162ED2452A46A9E300FD9245 /* PostScreenViewController.swift */,
+				162ED2472A46AA5800FD9245 /* PostScreenProgressSpinner.swift */,
+				162ED2492A46AA8F00FD9245 /* PostScreenPhotoManger.swift */,
+			);
+			path = PostScreen;
+			sourceTree = "<group>";
+		};
+		162ED2422A46A98400FD9245 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				162ED2432A46A99500FD9245 /* PostScreenView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		1B089AA82A423EAF00F5DD5C = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +156,7 @@
 				1B089B062A43638E00F5DD5C /* FirebaseAPICalls.swift */,
 				1B089AFA2A42498900F5DD5C /* DataModel */,
 				1B089AF32A4247D400F5DD5C /* ProgressSpinner */,
+				162ED2412A46A97100FD9245 /* PostScreen */,
 				1B089AE22A42466A00F5DD5C /* RegisterScreen */,
 				1B089B142A4376D500F5DD5C /* FriendListScreen */,
 				1B089B2C2A46008B00F5DD5C /* ProfileScreen */,
@@ -318,11 +346,13 @@
 				1B089B0B2A4365D600F5DD5C /* ProgressSpinnerViewController.swift in Sources */,
 				1B089AD82A4245F100F5DD5C /* RightBarButtonManager.swift in Sources */,
 				1B089AF72A42491000F5DD5C /* RegisterProgressSpinnerManager.swift in Sources */,
+				162ED2442A46A99500FD9245 /* PostScreenView.swift in Sources */,
 				1B089B092A4365AF00F5DD5C /* ProgressSpinnerDelegate.swift in Sources */,
 				1B089B0D2A4375BE00F5DD5C /* Post.swift in Sources */,
 				1B089B072A43638E00F5DD5C /* FirebaseAPICalls.swift in Sources */,
 				1B089B0F2A43765700F5DD5C /* Comment.swift in Sources */,
 				162ED23E2A4638AE00FD9245 /* PostTableViewCell.swift in Sources */,
+				162ED2482A46AA5800FD9245 /* PostScreenProgressSpinner.swift in Sources */,
 				1B089AB52A423EAF00F5DD5C /* AppDelegate.swift in Sources */,
 				1B089B292A46007400F5DD5C /* ProfileViewController.swift in Sources */,
 				162ED23C2A4630FA00FD9245 /* PhotoManagerViewController.swift in Sources */,
@@ -332,6 +362,8 @@
 				1B089B162A43773500F5DD5C /* FriendTableViewCell.swift in Sources */,
 				1B089B272A45EDFD00F5DD5C /* ImageViewUtils.swift in Sources */,
 				1B089B2B2A46008300F5DD5C /* ProfileScreenView.swift in Sources */,
+				162ED24A2A46AA8F00FD9245 /* PostScreenPhotoManger.swift in Sources */,
+				162ED2462A46A9E300FD9245 /* PostScreenViewController.swift in Sources */,
 				1B089AD62A42443F00F5DD5C /* MainScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
