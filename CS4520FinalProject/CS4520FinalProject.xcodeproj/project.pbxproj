@@ -11,6 +11,11 @@
 		0C3286662A464249003B7834 /* FriendRequestsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3286652A464249003B7834 /* FriendRequestsView.swift */; };
 		0C3286682A469799003B7834 /* FriendRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3286672A469799003B7834 /* FriendRequestViewController.swift */; };
 		0C32866A2A469879003B7834 /* FriendRequestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3286692A469879003B7834 /* FriendRequestTableViewController.swift */; };
+		1691D0252A46C28800C5353D /* PostScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1691D0242A46C28800C5353D /* PostScreenController.swift */; };
+		1691D0272A46C2C200C5353D /* PostScreenProgressSpinnerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1691D0262A46C2C200C5353D /* PostScreenProgressSpinnerManager.swift */; };
+		1691D0292A46C2FD00C5353D /* PostScreenPhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1691D0282A46C2FD00C5353D /* PostScreenPhotoManager.swift */; };
+		1691D02C2A46C33E00C5353D /* PostScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1691D02B2A46C33E00C5353D /* PostScreenView.swift */; };
+		1691D02E2A46C9C900C5353D /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1691D02D2A46C9C900C5353D /* PostTableViewCell.swift */; };
 		1B089AB52A423EAF00F5DD5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B089AB42A423EAF00F5DD5C /* AppDelegate.swift */; };
 		1B089AB72A423EAF00F5DD5C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B089AB62A423EAF00F5DD5C /* SceneDelegate.swift */; };
 		1B089AB92A423EAF00F5DD5C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B089AB82A423EAF00F5DD5C /* ViewController.swift */; };
@@ -51,6 +56,11 @@
 		0C3286652A464249003B7834 /* FriendRequestsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRequestsView.swift; sourceTree = "<group>"; };
 		0C3286672A469799003B7834 /* FriendRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRequestViewController.swift; sourceTree = "<group>"; };
 		0C3286692A469879003B7834 /* FriendRequestTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRequestTableViewController.swift; sourceTree = "<group>"; };
+		1691D0242A46C28800C5353D /* PostScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostScreenController.swift; sourceTree = "<group>"; };
+		1691D0262A46C2C200C5353D /* PostScreenProgressSpinnerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostScreenProgressSpinnerManager.swift; sourceTree = "<group>"; };
+		1691D0282A46C2FD00C5353D /* PostScreenPhotoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostScreenPhotoManager.swift; sourceTree = "<group>"; };
+		1691D02B2A46C33E00C5353D /* PostScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostScreenView.swift; sourceTree = "<group>"; };
+		1691D02D2A46C9C900C5353D /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		1B089AB12A423EAF00F5DD5C /* CS4520FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CS4520FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B089AB42A423EAF00F5DD5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B089AB62A423EAF00F5DD5C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +128,26 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		1691D0232A46C27200C5353D /* Post Screen */ = {
+			isa = PBXGroup;
+			children = (
+				1691D02A2A46C33100C5353D /* View */,
+				1691D0242A46C28800C5353D /* PostScreenController.swift */,
+				1691D0262A46C2C200C5353D /* PostScreenProgressSpinnerManager.swift */,
+				1691D0282A46C2FD00C5353D /* PostScreenPhotoManager.swift */,
+			);
+			path = "Post Screen";
+			sourceTree = "<group>";
+		};
+		1691D02A2A46C33100C5353D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1691D02B2A46C33E00C5353D /* PostScreenView.swift */,
+				1691D02D2A46C9C900C5353D /* PostTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		1B089AA82A423EAF00F5DD5C = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +167,7 @@
 		1B089AB32A423EAF00F5DD5C /* CS4520FinalProject */ = {
 			isa = PBXGroup;
 			children = (
+				1691D0232A46C27200C5353D /* Post Screen */,
 				0C3286612A464201003B7834 /* Friend Requests */,
 				1B089AFA2A42498900F5DD5C /* DataModel */,
 				1B089AF32A4247D400F5DD5C /* ProgressSpinner */,
@@ -331,16 +362,21 @@
 				1B089B132A4376D000F5DD5C /* FriendListViewController.swift in Sources */,
 				1B089AFF2A424AE900F5DD5C /* RegisterView.swift in Sources */,
 				1B089B2E2A4625CB00F5DD5C /* AlertController.swift in Sources */,
+				1691D0272A46C2C200C5353D /* PostScreenProgressSpinnerManager.swift in Sources */,
 				1B089B252A45EB3500F5DD5C /* RegisterPhotoManager.swift in Sources */,
 				1B089B192A4377A100F5DD5C /* Configs.swift in Sources */,
+				1691D0252A46C28800C5353D /* PostScreenController.swift in Sources */,
 				1B089AB92A423EAF00F5DD5C /* ViewController.swift in Sources */,
+				1691D02E2A46C9C900C5353D /* PostTableViewCell.swift in Sources */,
 				1B089B0B2A4365D600F5DD5C /* ProgressSpinnerViewController.swift in Sources */,
 				1B089AD82A4245F100F5DD5C /* RightBarButtonManager.swift in Sources */,
 				1B089AF72A42491000F5DD5C /* RegisterProgressSpinnerManager.swift in Sources */,
 				1B089B092A4365AF00F5DD5C /* ProgressSpinnerDelegate.swift in Sources */,
 				1B089B0D2A4375BE00F5DD5C /* Post.swift in Sources */,
+				1691D02C2A46C33E00C5353D /* PostScreenView.swift in Sources */,
 				1B089B072A43638E00F5DD5C /* FirebaseAPICalls.swift in Sources */,
 				1B089B0F2A43765700F5DD5C /* Comment.swift in Sources */,
+				1691D0292A46C2FD00C5353D /* PostScreenPhotoManager.swift in Sources */,
 				1B089AB52A423EAF00F5DD5C /* AppDelegate.swift in Sources */,
 				0C32866A2A469879003B7834 /* FriendRequestTableViewController.swift in Sources */,
 				1B089B292A46007400F5DD5C /* ProfileViewController.swift in Sources */,

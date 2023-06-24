@@ -7,6 +7,7 @@
 
 import Foundation
 import FirebaseAuth
+import UIKit
 
 extension FriendListViewController {
     
@@ -145,3 +146,31 @@ extension RegisterViewController{
 
     }
 }
+
+extension PostScreenViewController {
+    
+    func createPost(photoURL: URL?) {
+        if let caption = postView.textFieldDesc.text
+        {
+            let post = Post(image: photoURL?.absoluteString ?? "error", caption: caption)
+            do {
+                let collectionPost = try self.delegate.database
+                    .collection("user").document((delegate.currentAuthUser?.email)!).collection("post").addDocument(from: post, completion: {(error) in
+                        if error == nil{
+                            //MARK: hide progress indicator...
+                            self.navigationController?.popViewController(animated: true)
+                        }
+                        else {
+                            print("Error occured: \(String(describing: error))")
+                        }
+                    })
+            }
+            catch {
+                print("Error occured")
+            }
+        }
+        // do post create here
+        
+    }
+}
+           

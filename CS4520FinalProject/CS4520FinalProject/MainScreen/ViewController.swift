@@ -13,6 +13,7 @@ import FirebaseFirestoreSwift
 class ViewController: UIViewController {
 
     let mainScreenView = MainScreenView()
+    let postScreen = PostScreenViewController()
     
     var currentAuthUser: FirebaseAuth.User?
     
@@ -35,6 +36,8 @@ class ViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         
         navigationController?.navigationBar.backgroundColor = .lightGray
+        
+        mainScreenView.postButton.addTarget(self, action: #selector(onButtonPostTapped), for: .touchUpInside)
         
     }
     
@@ -67,6 +70,10 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    @objc func onButtonPostTapped(){
+           navigationController?.pushViewController(postScreen, animated: true)
+       }
 
 }
 
