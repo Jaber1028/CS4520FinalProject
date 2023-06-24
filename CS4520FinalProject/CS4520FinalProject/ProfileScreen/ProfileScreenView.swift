@@ -55,6 +55,7 @@ class ProfileScreenView: UIView {
         buttonTakePhoto.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(buttonTakePhoto)
     }
+
     
     func initConstraints() {
         NSLayoutConstraint.activate([

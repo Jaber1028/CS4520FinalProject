@@ -1,18 +1,19 @@
 //
-//  PostTableViewCell.swift
+//  FriendRequestsTableViewCell.swift
 //  CS4520FinalProject
 //
-//  Created by jacob aberasturi on 6/23/23.
+//  Created by Liam Evans on 6/23/23.
 //
 
 import UIKit
 
-class PostTableViewCell: UITableViewCell {
-
+class FriendRequestsTableViewCell: UITableViewCell {
+    
     var wrapperCellView: UIView!
     var labelName : UILabel!
     var labelDate : UILabel!
-    var imagePost : UIImageView!
+    var labelMessage : UILabel!
+    var imageProfile : UIImageView!
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?){
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -21,7 +22,8 @@ class PostTableViewCell: UITableViewCell {
         setupWrapperCellView()
         setupLabelDate()
         setupLabelName()
-        setupImagePost()
+        setupLabelMessage()
+        setupImageProfile()
         
         initConstraint()
     }
@@ -49,7 +51,7 @@ class PostTableViewCell: UITableViewCell {
         labelName.textAlignment = .left
         labelName.font = .boldSystemFont(ofSize: 10)
         labelName.translatesAutoresizingMaskIntoConstraints = false
-        wrapperCellView.addSubview(labelName)
+        self.addSubview(labelName)
     }
     
     func setupLabelDate() {
@@ -57,17 +59,25 @@ class PostTableViewCell: UITableViewCell {
         labelDate.textAlignment = .right
         labelDate.font = .boldSystemFont(ofSize: 10)
         labelDate.translatesAutoresizingMaskIntoConstraints = false
-        wrapperCellView.addSubview(labelDate)
+        self.addSubview(labelDate)
     }
     
-    func setupImagePost() {
-        imagePost = UIImageView()
-        imagePost.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
-        imagePost.contentMode = .scaleToFill
-        imagePost.layer.cornerRadius = 0.5 * imagePost.bounds.size.width
-        imagePost.clipsToBounds = true
-        imagePost.translatesAutoresizingMaskIntoConstraints = false
-        wrapperCellView.addSubview(imagePost)
+    func setupLabelMessage() {
+        labelMessage = UILabel()
+        labelMessage.textAlignment = .left
+        labelMessage.font = .boldSystemFont(ofSize: 14)
+        labelMessage.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(labelMessage)
+    }
+    
+    func setupImageProfile() {
+        imageProfile = UIImageView()
+        imageProfile.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
+        imageProfile.contentMode = .scaleToFill
+        imageProfile.layer.cornerRadius = 0.5 * imageProfile.bounds.size.width
+        imageProfile.clipsToBounds = true
+        imageProfile.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(imageProfile)
     }
     
     func initConstraint() {
@@ -78,22 +88,36 @@ class PostTableViewCell: UITableViewCell {
                 wrapperCellView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
                 wrapperCellView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
                 
-                imagePost.centerYAnchor.constraint(equalTo: wrapperCellView.centerYAnchor),
-                imagePost.leadingAnchor.constraint(equalTo: wrapperCellView.leadingAnchor, constant: 16),
-                imagePost.heightAnchor.constraint(equalTo: wrapperCellView.heightAnchor, multiplier: 0.8),
-                imagePost.widthAnchor.constraint(equalTo: self.imagePost.heightAnchor),
+                imageProfile.centerYAnchor.constraint(equalTo: wrapperCellView.centerYAnchor),
+                imageProfile.leadingAnchor.constraint(equalTo: wrapperCellView.leadingAnchor, constant: 16),
+                imageProfile.heightAnchor.constraint(equalTo: wrapperCellView.heightAnchor, multiplier: 0.8),
+                imageProfile.widthAnchor.constraint(equalTo: self.imageProfile.heightAnchor),
                 
-                labelName.topAnchor.constraint(equalTo: wrapperCellView.topAnchor, constant: 4),
-                labelName.leadingAnchor.constraint(equalTo: wrapperCellView.leadingAnchor, constant: 16),
+                labelName.topAnchor.constraint(equalTo: imageProfile.topAnchor),
+                labelName.leadingAnchor.constraint(equalTo: imageProfile.trailingAnchor, constant: 16),
                 
                 labelDate.topAnchor.constraint(equalTo: labelName.topAnchor),
                 labelDate.trailingAnchor.constraint(equalTo: wrapperCellView.trailingAnchor, constant: -16),
                 
-                imagePost.topAnchor.constraint(equalTo: labelName.bottomAnchor),
+                labelMessage.topAnchor.constraint(equalTo: labelDate.bottomAnchor, constant: 8),
+                labelMessage.leadingAnchor.constraint(equalTo: labelName.leadingAnchor),
+                labelMessage.trailingAnchor.constraint(equalTo: labelDate.trailingAnchor),
                 
                 wrapperCellView.heightAnchor.constraint(equalToConstant: 50)
             ]
         )
         
     }
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
+
 }

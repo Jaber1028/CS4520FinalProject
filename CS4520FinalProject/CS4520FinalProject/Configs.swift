@@ -10,6 +10,7 @@ import UIKit
 
 class Configs{
     static let tableViewFriendsID = "tableViewFriendsID"
+    static let tableViewFriendRequestsID = "tableViewFriendRequestsID"
     
     static let defaultPicture = UIImage(systemName: "person.circle")
 }

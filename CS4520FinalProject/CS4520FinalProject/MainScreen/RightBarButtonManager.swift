@@ -143,7 +143,7 @@ extension ViewController{
             if error == nil{
                 print("Logged in: \(email)")
             }else {
-                                let errorAlert = UIAlertController(
+                let errorAlert = UIAlertController(
                     title: "Error",
                     message: "Check credentials again",
                     preferredStyle: .alert)

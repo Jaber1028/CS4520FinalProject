@@ -33,9 +33,11 @@ extension FriendListViewController {
             })
     }
     
-    func addFriendToFirebase(email: String) {
+
+    
+    func addFriendRequestToFirebase(email: String) {
         let collectionFriend = self.delegate.database
-            .collection("user").document((delegate.currentAuthUser?.email)!).collection("friend")
+            .collection("user").document(email.lowercased()).collection("friendRequests").document((delegate.currentAuthUser?.email)!)
         
         self.delegate.database.collection("user").addSnapshotListener(includeMetadataChanges: false, listener: {querySnapshot, error in
             if let documents = querySnapshot?.documents{
@@ -43,13 +45,13 @@ extension FriendListViewController {
                     do{
                         let user = try document.data(as: User.self)
                         
-                        if user.email.lowercased() == email.lowercased() {
-                            collectionFriend.addDocument(data: ["name": user.name,
+                        if user.email.lowercased() == self.delegate.currentUser.email.lowercased() {
+                            collectionFriend.setData(["name": user.name,
                                                                 "email": user.email,
                                                                 "age": user.age,
                                                                 "photo": user.photo?.absoluteString])
                         }
-                        self.getAllFriends()
+                        
                         
                     } catch {
                         print(error)

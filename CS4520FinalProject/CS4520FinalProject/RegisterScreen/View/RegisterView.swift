@@ -36,7 +36,6 @@ class RegisterView: UIView {
         textFieldName.placeholder = "Name"
         textFieldName.keyboardType = .default
         textFieldName.borderStyle = .roundedRect
-        textFieldName.autocorrectionType = .no
         textFieldName.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(textFieldName)
     }
@@ -46,8 +45,6 @@ class RegisterView: UIView {
         textFieldEmail.placeholder = "Email"
         textFieldEmail.keyboardType = .emailAddress
         textFieldEmail.borderStyle = .roundedRect
-        textFieldEmail.autocorrectionType = .no
-        textFieldEmail.autocapitalizationType = .none
         textFieldEmail.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(textFieldEmail)
     }
@@ -68,8 +65,6 @@ class RegisterView: UIView {
         textFieldPassword.isSecureTextEntry = true
         textFieldPassword.textContentType = .oneTimeCode
         textFieldPassword.borderStyle = .roundedRect
-        textFieldPassword.autocorrectionType = .no
-        textFieldPassword.autocapitalizationType = .none
         textFieldPassword.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(textFieldPassword)
     }
@@ -81,8 +76,6 @@ class RegisterView: UIView {
         textFieldPasswordConfirm.isSecureTextEntry = true
         textFieldPasswordConfirm.textContentType = .oneTimeCode
         textFieldPasswordConfirm.borderStyle = .roundedRect
-        textFieldPasswordConfirm.autocorrectionType = .no
-        textFieldPasswordConfirm.autocapitalizationType = .none
         textFieldPasswordConfirm.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(textFieldPasswordConfirm)
     }

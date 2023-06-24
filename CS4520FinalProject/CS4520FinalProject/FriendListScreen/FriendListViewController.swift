@@ -37,7 +37,27 @@ class FriendListViewController: UIViewController {
         
         navigationController?.navigationBar.backgroundColor = .lightGray
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.fill.badge.plus"), style: .plain, target: self, action: #selector(addNewFriendButtonAction))
+        let barFriendRequests = UIBarButtonItem(
+            title: "Friend Requests",
+            style: .plain,
+            target: self,
+            action: #selector(onFriendRequestButtonTapped)
+        )
+        
+        let barAddFriend = UIBarButtonItem(
+            image: UIImage(systemName: "person.fill.badge.plus"),
+            style: .plain,
+            target: self,
+            action: #selector(addNewFriendButtonAction)
+        )
+        
+        navigationItem.rightBarButtonItems = [barFriendRequests, barAddFriend]
+    }
+    
+    @objc func onFriendRequestButtonTapped() {
+        let friendRequestViewController = FriendRequestViewController()
+        friendRequestViewController.delegate = self.delegate
+        navigationController?.pushViewController(friendRequestViewController, animated: true)
     }
     
     @objc func addNewFriendButtonAction() {
@@ -60,7 +80,7 @@ class FriendListViewController: UIViewController {
                     AlertController().alertMissingField(self)
                 }
                 else {
-                    self.addFriendToFirebase(email: email)
+                    self.addFriendRequestToFirebase(email: email)
                 }
             }
         })
