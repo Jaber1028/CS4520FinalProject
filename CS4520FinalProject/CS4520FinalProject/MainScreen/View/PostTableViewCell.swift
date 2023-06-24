@@ -49,7 +49,7 @@ class PostTableViewCell: UITableViewCell {
         labelName.textAlignment = .left
         labelName.font = .boldSystemFont(ofSize: 10)
         labelName.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(labelName)
+        wrapperCellView.addSubview(labelName)
     }
     
     func setupLabelDate() {
@@ -57,7 +57,7 @@ class PostTableViewCell: UITableViewCell {
         labelDate.textAlignment = .right
         labelDate.font = .boldSystemFont(ofSize: 10)
         labelDate.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(labelDate)
+        wrapperCellView.addSubview(labelDate)
     }
     
     func setupImagePost() {
@@ -67,7 +67,7 @@ class PostTableViewCell: UITableViewCell {
         imagePost.layer.cornerRadius = 0.5 * imagePost.bounds.size.width
         imagePost.clipsToBounds = true
         imagePost.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(imagePost)
+        wrapperCellView.addSubview(imagePost)
     }
     
     func initConstraint() {
@@ -83,11 +83,13 @@ class PostTableViewCell: UITableViewCell {
                 imagePost.heightAnchor.constraint(equalTo: wrapperCellView.heightAnchor, multiplier: 0.8),
                 imagePost.widthAnchor.constraint(equalTo: self.imagePost.heightAnchor),
                 
-                labelName.topAnchor.constraint(equalTo: imagePost.topAnchor),
-                labelName.leadingAnchor.constraint(equalTo: imagePost.trailingAnchor, constant: 16),
+                labelName.topAnchor.constraint(equalTo: wrapperCellView.topAnchor, constant: 4),
+                labelName.leadingAnchor.constraint(equalTo: wrapperCellView.leadingAnchor, constant: 16),
                 
                 labelDate.topAnchor.constraint(equalTo: labelName.topAnchor),
                 labelDate.trailingAnchor.constraint(equalTo: wrapperCellView.trailingAnchor, constant: -16),
+                
+                imagePost.topAnchor.constraint(equalTo: labelName.bottomAnchor),
                 
                 wrapperCellView.heightAnchor.constraint(equalToConstant: 50)
             ]
