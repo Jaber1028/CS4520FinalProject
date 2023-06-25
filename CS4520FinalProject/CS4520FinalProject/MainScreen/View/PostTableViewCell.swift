@@ -10,16 +10,19 @@ import UIKit
 class PostTableViewCell: UITableViewCell {
 
     var wrapperCellView: UIView!
+    var imageProfile: UIImageView!
     var labelName : UILabel!
-    var labelDate : UILabel!
+    var labelDescription : UILabel!
     var imagePost : UIImageView!
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?){
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.backgroundColor = .white
         
+        
         setupWrapperCellView()
-        setupLabelDate()
+        setupImageProfile()
+        setupLabelDescription()
         setupLabelName()
         setupImagePost()
         
@@ -44,20 +47,30 @@ class PostTableViewCell: UITableViewCell {
         self.addSubview(wrapperCellView)
     }
     
+    func setupImageProfile() {
+        imageProfile = UIImageView()
+        imageProfile.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
+        imageProfile.contentMode = .scaleToFill
+        imageProfile.layer.cornerRadius = 0.5 * imageProfile.bounds.size.width
+        imageProfile.clipsToBounds = true
+        imageProfile.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(imageProfile)
+    }
+    
     func setupLabelName() {
         labelName = UILabel()
         labelName.textAlignment = .left
-        labelName.font = .boldSystemFont(ofSize: 10)
+        labelName.font = .boldSystemFont(ofSize: 19)
         labelName.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(labelName)
+        wrapperCellView.addSubview(labelName)
     }
     
-    func setupLabelDate() {
-        labelDate = UILabel()
-        labelDate.textAlignment = .right
-        labelDate.font = .boldSystemFont(ofSize: 10)
-        labelDate.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(labelDate)
+    func setupLabelDescription() {
+        labelDescription = UILabel()
+        labelDescription.textAlignment = .right
+        labelDescription.font = .systemFont(ofSize: 16)
+        labelDescription.translatesAutoresizingMaskIntoConstraints = false
+        wrapperCellView.addSubview(labelDescription)
     }
     
     func setupImagePost() {
@@ -67,7 +80,7 @@ class PostTableViewCell: UITableViewCell {
         imagePost.layer.cornerRadius = 0.5 * imagePost.bounds.size.width
         imagePost.clipsToBounds = true
         imagePost.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(imagePost)
+        wrapperCellView.addSubview(imagePost)
     }
     
     func initConstraint() {
@@ -78,18 +91,24 @@ class PostTableViewCell: UITableViewCell {
                 wrapperCellView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
                 wrapperCellView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
                 
+                imageProfile.topAnchor.constraint(equalTo: wrapperCellView.topAnchor, constant: 8),
+                imageProfile.leadingAnchor.constraint(equalTo: wrapperCellView.leadingAnchor, constant: 8),
+                imageProfile.widthAnchor.constraint(equalToConstant: 25),
+                imageProfile.heightAnchor.constraint(equalTo: imageProfile.widthAnchor),
+                
+                labelName.centerYAnchor.constraint(equalTo: imageProfile.centerYAnchor),
+                labelName.leadingAnchor.constraint(equalTo: imageProfile.trailingAnchor, constant: 8),
+                
                 imagePost.centerYAnchor.constraint(equalTo: wrapperCellView.centerYAnchor),
-                imagePost.leadingAnchor.constraint(equalTo: wrapperCellView.leadingAnchor, constant: 16),
-                imagePost.heightAnchor.constraint(equalTo: wrapperCellView.heightAnchor, multiplier: 0.8),
-                imagePost.widthAnchor.constraint(equalTo: self.imagePost.heightAnchor),
+                imagePost.leadingAnchor.constraint(equalTo: wrapperCellView.leadingAnchor),
+                imagePost.topAnchor.constraint(equalTo: labelName.bottomAnchor, constant: 8),
+                imagePost.widthAnchor.constraint(equalTo: wrapperCellView.widthAnchor),
+                imagePost.heightAnchor.constraint(equalTo: imagePost.widthAnchor),
                 
-                labelName.topAnchor.constraint(equalTo: imagePost.topAnchor),
-                labelName.leadingAnchor.constraint(equalTo: imagePost.trailingAnchor, constant: 16),
+                labelDescription.topAnchor.constraint(equalTo: imagePost.bottomAnchor),
+                labelDescription.leadingAnchor.constraint(equalTo: wrapperCellView.leadingAnchor, constant: 8),
+                labelDescription.bottomAnchor.constraint(equalTo: wrapperCellView.bottomAnchor, constant: -8),
                 
-                labelDate.topAnchor.constraint(equalTo: labelName.topAnchor),
-                labelDate.trailingAnchor.constraint(equalTo: wrapperCellView.trailingAnchor, constant: -16),
-                
-                wrapperCellView.heightAnchor.constraint(equalToConstant: 50)
             ]
         )
         

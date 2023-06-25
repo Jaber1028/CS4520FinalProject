@@ -38,7 +38,7 @@ class FriendListViewController: UIViewController {
         navigationController?.navigationBar.backgroundColor = .lightGray
         
         let barFriendRequests = UIBarButtonItem(
-            title: "Friend Requests",
+            image: UIImage(systemName: "person.fill.questionmark"),
             style: .plain,
             target: self,
             action: #selector(onFriendRequestButtonTapped)
@@ -51,7 +51,7 @@ class FriendListViewController: UIViewController {
             action: #selector(addNewFriendButtonAction)
         )
         
-        navigationItem.rightBarButtonItems = [barFriendRequests, barAddFriend]
+        navigationItem.rightBarButtonItems = [barAddFriend, barFriendRequests]
     }
     
     @objc func onFriendRequestButtonTapped() {

@@ -10,12 +10,12 @@ import FirebaseFirestoreSwift
 
 struct Post: Codable{
     @DocumentID var id: String?
-    var image: String
     var caption: String
+    var image: URL?
     
-    init(id: String? = nil, image: String, caption: String) {
+    init(id: String? = nil, caption: String, image: URL? = nil) {
         self.id = id
-        self.image = image
         self.caption = caption
+        self.image = image
     }
 }

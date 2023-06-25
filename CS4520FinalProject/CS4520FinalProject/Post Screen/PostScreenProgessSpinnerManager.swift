@@ -1,19 +1,18 @@
 //
-//  PostScreenViewController.swift
+//  PostProgressSpinnerManager.swift
 //  CS4520FinalProject
 //
-//  Created by jacob aberasturi on 6/24/23.
+//  Created by Kenny Lin on 6/20/23.
 //
+import Foundation
 
-import UIKit
-    
 extension PostScreenViewController: ProgressSpinnerDelegate{
     func showActivityIndicator(){
         addChild(childProgressView)
         view.addSubview(childProgressView.view)
         childProgressView.didMove(toParent: self)
     }
-    
+
     func hideActivityIndicator(){
         childProgressView.willMove(toParent: nil)
         childProgressView.view.removeFromSuperview()

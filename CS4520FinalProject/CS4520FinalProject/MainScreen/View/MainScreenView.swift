@@ -31,7 +31,7 @@ class MainScreenView: UIView {
     
     func setupPostTableView() {
         postTableView = UITableView()
-        postTableView.register(PostTableViewCell.self, forCellReuseIdentifier: Configs.tableViewFriendsID)
+        postTableView.register(PostTableViewCell.self, forCellReuseIdentifier: Configs.tableViewPostId)
         postTableView.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(postTableView)
     }
@@ -106,7 +106,7 @@ class MainScreenView: UIView {
             buttonProfile.heightAnchor.constraint(equalToConstant: 30),
             buttonProfile.widthAnchor.constraint(equalToConstant: 30),
             
-            postTableView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 32),
+            postTableView.topAnchor.constraint(equalTo: labelText.bottomAnchor, constant: 16),
             postTableView.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 8),
             postTableView.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -8),
             postTableView.bottomAnchor.constraint(equalTo: bottomAddView.topAnchor, constant: -8),

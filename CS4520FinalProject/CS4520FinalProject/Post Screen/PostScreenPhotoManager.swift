@@ -72,7 +72,7 @@ extension PostScreenViewController {
                             imageRef.downloadURL(completion: {(url, error) in
                                 if error == nil{
                                     profilePhotoURL = url
-                                    self.createPost(photoURL: profilePhotoURL)
+                                    self.createPost(photoURL: profilePhotoURL!)
                                 }
                             })
                         }

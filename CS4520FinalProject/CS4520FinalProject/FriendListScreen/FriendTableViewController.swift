@@ -30,4 +30,13 @@ extension FriendListViewController: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(friendList[indexPath.row].email.lowercased())
+        
+        let friendProfileViewController = FriendProfileViewController()
+        friendProfileViewController.currentUser = friendList[indexPath.row]
+        navigationController?.pushViewController(friendProfileViewController, animated: true)
+    }
+    
+    
 }

@@ -9,8 +9,8 @@ import UIKit
 
 class ProfileScreenView: UIView {
 
-    var labelEmail : UILabel!
-    var labelPhoto:UILabel!
+    var labelEmail: UILabel!
+    var labelPhoto: UILabel!
     var buttonTakePhoto: UIButton!
     
     override init(frame: CGRect) {

@@ -13,7 +13,6 @@ import FirebaseFirestoreSwift
 class ViewController: UIViewController {
 
     let mainScreenView = MainScreenView()
-    let postScreen = PostScreenViewController()
     
     var currentAuthUser: FirebaseAuth.User?
     
@@ -22,6 +21,8 @@ class ViewController: UIViewController {
     var currentUser: User!
     
     let database = Firestore.firestore()
+    
+    var posts = [Post]()
     
     override func loadView() {
         view = mainScreenView
@@ -38,6 +39,12 @@ class ViewController: UIViewController {
         navigationController?.navigationBar.backgroundColor = .lightGray
         
         mainScreenView.postButton.addTarget(self, action: #selector(onButtonPostTapped), for: .touchUpInside)
+        
+        mainScreenView.postTableView.delegate = self
+        mainScreenView.postTableView.dataSource = self
+        
+        //MARK: removing the separator line...
+        mainScreenView.postTableView.separatorStyle = .none
         
     }
     
@@ -66,14 +73,17 @@ class ViewController: UIViewController {
 
                 //MARK: Logout bar button...
                 self.setupRightBarButton(isLoggedin: true)
+                self.getAllPosts()
                 
             }
         }
     }
     
     @objc func onButtonPostTapped(){
-           navigationController?.pushViewController(postScreen, animated: true)
-       }
+        let postScreen = PostScreenViewController()
+        postScreen.delegate = self
+        navigationController?.pushViewController(postScreen, animated: true)
+    }
 
 }
 
