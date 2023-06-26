@@ -82,7 +82,7 @@ class ProfileViewController: UIViewController {
     
     @objc func onLogoutButtonAction() {
         navigationController?.popViewController(animated: true)
-        self.delegate.onLogOutBarButtonTapped()
+        self.delegate.logoutCurrAuth()
     }
     
     func getMenuImagePicker() -> UIMenu{

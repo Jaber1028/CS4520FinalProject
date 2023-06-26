@@ -121,11 +121,14 @@ extension ViewController{
         self.dismiss(animated: true)
     }
     
-    func onLogOutBarButtonTapped(){
+    func logoutCurrAuth(){
         let logoutAlert = UIAlertController(title: "Logging out!", message: "Are you sure want to log out?", preferredStyle: .actionSheet)
         logoutAlert.addAction(UIAlertAction(title: "Yes, log out!", style: .default, handler: {(_) in
                 do{
                     try Auth.auth().signOut()
+                    self.posts.removeAll()
+                    self.mainScreenView.postTableView.reloadData()
+                    
                 }catch{
                     print("Error occured!")
                 }
