@@ -61,8 +61,6 @@ class ProfileScreenView: UIView {
     func setupButtonLogout() {
         buttonLogout = UIButton(type: .system)
         buttonLogout.setTitle("Logout", for: .normal)
-        buttonLogout.layer.borderWidth = 1
-        buttonLogout.layer.cornerRadius = 5
         buttonLogout.titleLabel?.font = .boldSystemFont(ofSize: 16)
         buttonLogout.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(buttonLogout)

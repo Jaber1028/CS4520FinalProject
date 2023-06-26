@@ -174,7 +174,7 @@ extension PostScreenViewController {
         if let caption = postView.textFieldDesc.text
         {
             print("Posting")
-            let post = Post(caption: caption, image: photoURL)
+            let post = Post(caption: caption, image: photoURL, workout: self.exercises)
             do {
                 let collectionPost = try self.database
                     .collection("user").document((delegate.currentAuthUser?.email)!).collection("post").addDocument(from: post, completion: {(error) in

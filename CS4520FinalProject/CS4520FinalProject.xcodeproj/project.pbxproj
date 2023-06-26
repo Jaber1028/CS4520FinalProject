@@ -57,6 +57,9 @@
 		1B6E420B2A490D0A00942B48 /* EditPhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6E420A2A490D0A00942B48 /* EditPhotoManager.swift */; };
 		1B6E420D2A490DD700942B48 /* ProfileProgressSpinnerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6E420C2A490DD700942B48 /* ProfileProgressSpinnerManager.swift */; };
 		1B6E420F2A49122200942B48 /* ButtonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6E420E2A49122200942B48 /* ButtonUtils.swift */; };
+		1B6EA6A62A4A06BB00BDBF12 /* ExerciseLoggerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6EA6A52A4A06BB00BDBF12 /* ExerciseLoggerTableViewCell.swift */; };
+		1B6EA6A82A4A06CD00BDBF12 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6EA6A72A4A06CD00BDBF12 /* Workout.swift */; };
+		1B6EA6AA2A4A06D600BDBF12 /* ExerciseLoggerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6EA6A92A4A06D600BDBF12 /* ExerciseLoggerController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +110,9 @@
 		1B6E420A2A490D0A00942B48 /* EditPhotoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPhotoManager.swift; sourceTree = "<group>"; };
 		1B6E420C2A490DD700942B48 /* ProfileProgressSpinnerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileProgressSpinnerManager.swift; sourceTree = "<group>"; };
 		1B6E420E2A49122200942B48 /* ButtonUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonUtils.swift; sourceTree = "<group>"; };
+		1B6EA6A52A4A06BB00BDBF12 /* ExerciseLoggerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseLoggerTableViewCell.swift; sourceTree = "<group>"; };
+		1B6EA6A72A4A06CD00BDBF12 /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		1B6EA6A92A4A06D600BDBF12 /* ExerciseLoggerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseLoggerController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +176,7 @@
 				1691D0242A46C28800C5353D /* PostScreenViewController.swift */,
 				0C32866B2A48E794003B7834 /* PostScreenProgessSpinnerManager.swift */,
 				1691D0282A46C2FD00C5353D /* PostScreenPhotoManager.swift */,
+				1B6EA6A92A4A06D600BDBF12 /* ExerciseLoggerController.swift */,
 			);
 			path = "Post Screen";
 			sourceTree = "<group>";
@@ -177,6 +184,7 @@
 		1691D02A2A46C33100C5353D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1B6EA6A52A4A06BB00BDBF12 /* ExerciseLoggerTableViewCell.swift */,
 				1691D02B2A46C33E00C5353D /* PostScreenView.swift */,
 			);
 			path = View;
@@ -277,6 +285,7 @@
 		1B089AFA2A42498900F5DD5C /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
+				1B6EA6A72A4A06CD00BDBF12 /* Workout.swift */,
 				1B089B042A424BBF00F5DD5C /* User.swift */,
 				1B089B0C2A4375BE00F5DD5C /* Post.swift */,
 				1B089B0E2A43765700F5DD5C /* Comment.swift */,
@@ -404,6 +413,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B6EA6A62A4A06BB00BDBF12 /* ExerciseLoggerTableViewCell.swift in Sources */,
 				0C3286662A464249003B7834 /* FriendRequestsView.swift in Sources */,
 				1B089B052A424BBF00F5DD5C /* User.swift in Sources */,
 				0C3286762A48F66A003B7834 /* FriendProfileView.swift in Sources */,
@@ -426,6 +436,7 @@
 				1B089B092A4365AF00F5DD5C /* ProgressSpinnerDelegate.swift in Sources */,
 				1B089B0D2A4375BE00F5DD5C /* Post.swift in Sources */,
 				1691D02C2A46C33E00C5353D /* PostScreenView.swift in Sources */,
+				1B6EA6A82A4A06CD00BDBF12 /* Workout.swift in Sources */,
 				1B089B072A43638E00F5DD5C /* FirebaseAPICalls.swift in Sources */,
 				0C32866E2A48EBED003B7834 /* PostTableViewCell.swift in Sources */,
 				1B089B0F2A43765700F5DD5C /* Comment.swift in Sources */,
@@ -440,6 +451,7 @@
 				0C3286642A464234003B7834 /* FriendRequestsTableViewCell.swift in Sources */,
 				1B089B1B2A43786200F5DD5C /* FriendTableViewController.swift in Sources */,
 				1B089B162A43773500F5DD5C /* FriendTableViewCell.swift in Sources */,
+				1B6EA6AA2A4A06D600BDBF12 /* ExerciseLoggerController.swift in Sources */,
 				1B089B272A45EDFD00F5DD5C /* ImageViewUtils.swift in Sources */,
 				1B089B2B2A46008300F5DD5C /* ProfileScreenView.swift in Sources */,
 				1B6E420F2A49122200942B48 /* ButtonUtils.swift in Sources */,

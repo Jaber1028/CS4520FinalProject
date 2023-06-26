@@ -12,6 +12,12 @@ class PostTableViewCell: UITableViewCell {
     var wrapperCellView: UIView!
     var imageProfile: UIImageView!
     var labelName : UILabel!
+    
+    var labelExercises: UILabel!
+    var labelWeights: UILabel!
+    var labelSets: UILabel!
+    var labelReps: UILabel!
+    
     var labelDescription : UILabel!
     var imagePost : UIImageView!
     
@@ -22,6 +28,10 @@ class PostTableViewCell: UITableViewCell {
         
         setupWrapperCellView()
         setupImageProfile()
+        setupLabelExercises()
+        setupLabelWeights()
+        setupLabelSets()
+        setupLabelReps()
         setupLabelDescription()
         setupLabelName()
         setupImagePost()
@@ -65,14 +75,6 @@ class PostTableViewCell: UITableViewCell {
         wrapperCellView.addSubview(labelName)
     }
     
-    func setupLabelDescription() {
-        labelDescription = UILabel()
-        labelDescription.textAlignment = .right
-        labelDescription.font = .systemFont(ofSize: 16)
-        labelDescription.translatesAutoresizingMaskIntoConstraints = false
-        wrapperCellView.addSubview(labelDescription)
-    }
-    
     func setupImagePost() {
         imagePost = UIImageView()
         imagePost.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
@@ -82,6 +84,47 @@ class PostTableViewCell: UITableViewCell {
         imagePost.translatesAutoresizingMaskIntoConstraints = false
         wrapperCellView.addSubview(imagePost)
     }
+    
+    func setupLabelExercises() {
+        labelExercises = UILabel()
+        labelExercises.text = ""
+        labelExercises.font = .boldSystemFont(ofSize: 16)
+        labelExercises.translatesAutoresizingMaskIntoConstraints = false
+        wrapperCellView.addSubview(labelExercises)
+    }
+    
+    func setupLabelWeights() {
+        labelWeights = UILabel()
+        labelWeights.text = ""
+        labelWeights.font = .boldSystemFont(ofSize: 16)
+        labelWeights.translatesAutoresizingMaskIntoConstraints = false
+        wrapperCellView.addSubview(labelWeights)
+    }
+    
+    func setupLabelSets() {
+        labelSets = UILabel()
+        labelSets.text = ""
+        labelSets.font = .boldSystemFont(ofSize: 16)
+        labelSets.translatesAutoresizingMaskIntoConstraints = false
+        wrapperCellView.addSubview(labelSets)
+    }
+    
+    func setupLabelReps() {
+        labelReps = UILabel()
+        labelReps.text = ""
+        labelReps.font = .boldSystemFont(ofSize: 16)
+        labelReps.translatesAutoresizingMaskIntoConstraints = false
+        wrapperCellView.addSubview(labelReps)
+    }
+    
+    func setupLabelDescription() {
+        labelDescription = UILabel()
+        labelDescription.textAlignment = .right
+        labelDescription.font = .systemFont(ofSize: 16)
+        labelDescription.translatesAutoresizingMaskIntoConstraints = false
+        wrapperCellView.addSubview(labelDescription)
+    }
+
     
     func initConstraint() {
         NSLayoutConstraint.activate(
@@ -99,13 +142,28 @@ class PostTableViewCell: UITableViewCell {
                 labelName.centerYAnchor.constraint(equalTo: imageProfile.centerYAnchor),
                 labelName.leadingAnchor.constraint(equalTo: imageProfile.trailingAnchor, constant: 8),
                 
-                imagePost.centerYAnchor.constraint(equalTo: wrapperCellView.centerYAnchor),
-                imagePost.leadingAnchor.constraint(equalTo: wrapperCellView.leadingAnchor),
+                imagePost.centerXAnchor.constraint(equalTo: wrapperCellView.centerXAnchor),
                 imagePost.topAnchor.constraint(equalTo: labelName.bottomAnchor, constant: 8),
-                imagePost.widthAnchor.constraint(equalTo: wrapperCellView.widthAnchor),
+                imagePost.widthAnchor.constraint(equalTo: wrapperCellView.widthAnchor, multiplier: 0.95),
                 imagePost.heightAnchor.constraint(equalTo: imagePost.widthAnchor),
                 
-                labelDescription.topAnchor.constraint(equalTo: imagePost.bottomAnchor),
+                labelExercises.topAnchor.constraint(equalTo: imagePost.bottomAnchor, constant: 12),
+                labelExercises.leadingAnchor.constraint(equalTo: wrapperCellView.leadingAnchor, constant: 8),
+                labelExercises.widthAnchor.constraint(equalTo: wrapperCellView.widthAnchor, multiplier: 0.5),
+                
+                labelWeights.centerYAnchor.constraint(equalTo: labelExercises.centerYAnchor),
+                labelWeights.leadingAnchor.constraint(equalTo: labelExercises.trailingAnchor, constant: 4),
+                labelWeights.widthAnchor.constraint(equalTo: wrapperCellView.widthAnchor, multiplier: 0.15),
+                
+                labelSets.centerYAnchor.constraint(equalTo: labelWeights.centerYAnchor),
+                labelSets.leadingAnchor.constraint(equalTo: labelWeights.trailingAnchor, constant: 4),
+                labelSets.widthAnchor.constraint(equalTo: wrapperCellView.widthAnchor, multiplier: 0.15),
+                
+                labelReps.centerYAnchor.constraint(equalTo: labelSets.centerYAnchor),
+                labelReps.leadingAnchor.constraint(equalTo: labelSets.trailingAnchor, constant: 4),
+                labelReps.widthAnchor.constraint(equalTo: wrapperCellView.widthAnchor, multiplier: 0.15),
+                
+                labelDescription.topAnchor.constraint(equalTo: labelReps.bottomAnchor),
                 labelDescription.leadingAnchor.constraint(equalTo: wrapperCellView.leadingAnchor, constant: 8),
                 labelDescription.bottomAnchor.constraint(equalTo: wrapperCellView.bottomAnchor, constant: -8),
                 
