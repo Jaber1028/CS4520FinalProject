@@ -18,6 +18,9 @@
 		0C3286762A48F66A003B7834 /* FriendProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3286752A48F66A003B7834 /* FriendProfileView.swift */; };
 		0C3286782A48F678003B7834 /* FriendProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3286772A48F678003B7834 /* FriendProfileViewController.swift */; };
 		0C32867A2A48F684003B7834 /* FriendProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3286792A48F684003B7834 /* FriendProfileTableViewController.swift */; };
+		0C32867C2A490096003B7834 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C32867B2A490096003B7834 /* Workout.swift */; };
+		0C32867E2A4903D3003B7834 /* ExerciseLoggerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C32867D2A4903D3003B7834 /* ExerciseLoggerTableViewCell.swift */; };
+		0C3286802A490A85003B7834 /* ExerciseLoggerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C32867F2A490A85003B7834 /* ExerciseLoggerController.swift */; };
 		1691D0252A46C28800C5353D /* PostScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1691D0242A46C28800C5353D /* PostScreenViewController.swift */; };
 		1691D0292A46C2FD00C5353D /* PostScreenPhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1691D0282A46C2FD00C5353D /* PostScreenPhotoManager.swift */; };
 		1691D02C2A46C33E00C5353D /* PostScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1691D02B2A46C33E00C5353D /* PostScreenView.swift */; };
@@ -54,9 +57,6 @@
 		1B089B292A46007400F5DD5C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B089B282A46007300F5DD5C /* ProfileViewController.swift */; };
 		1B089B2B2A46008300F5DD5C /* ProfileScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B089B2A2A46008300F5DD5C /* ProfileScreenView.swift */; };
 		1B089B2E2A4625CB00F5DD5C /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B089B2D2A4625CB00F5DD5C /* AlertController.swift */; };
-		1B6E420B2A490D0A00942B48 /* EditPhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6E420A2A490D0A00942B48 /* EditPhotoManager.swift */; };
-		1B6E420D2A490DD700942B48 /* ProfileProgressSpinnerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6E420C2A490DD700942B48 /* ProfileProgressSpinnerManager.swift */; };
-		1B6E420F2A49122200942B48 /* ButtonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6E420E2A49122200942B48 /* ButtonUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +71,9 @@
 		0C3286752A48F66A003B7834 /* FriendProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendProfileView.swift; sourceTree = "<group>"; };
 		0C3286772A48F678003B7834 /* FriendProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendProfileViewController.swift; sourceTree = "<group>"; };
 		0C3286792A48F684003B7834 /* FriendProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendProfileTableViewController.swift; sourceTree = "<group>"; };
+		0C32867B2A490096003B7834 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		0C32867D2A4903D3003B7834 /* ExerciseLoggerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseLoggerTableViewCell.swift; sourceTree = "<group>"; };
+		0C32867F2A490A85003B7834 /* ExerciseLoggerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseLoggerController.swift; sourceTree = "<group>"; };
 		1691D0242A46C28800C5353D /* PostScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostScreenViewController.swift; sourceTree = "<group>"; };
 		1691D0282A46C2FD00C5353D /* PostScreenPhotoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostScreenPhotoManager.swift; sourceTree = "<group>"; };
 		1691D02B2A46C33E00C5353D /* PostScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostScreenView.swift; sourceTree = "<group>"; };
@@ -104,9 +107,6 @@
 		1B089B282A46007300F5DD5C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		1B089B2A2A46008300F5DD5C /* ProfileScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenView.swift; sourceTree = "<group>"; };
 		1B089B2D2A4625CB00F5DD5C /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
-		1B6E420A2A490D0A00942B48 /* EditPhotoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPhotoManager.swift; sourceTree = "<group>"; };
-		1B6E420C2A490DD700942B48 /* ProfileProgressSpinnerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileProgressSpinnerManager.swift; sourceTree = "<group>"; };
-		1B6E420E2A49122200942B48 /* ButtonUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +168,7 @@
 			children = (
 				1691D02A2A46C33100C5353D /* View */,
 				1691D0242A46C28800C5353D /* PostScreenViewController.swift */,
+				0C32867F2A490A85003B7834 /* ExerciseLoggerController.swift */,
 				0C32866B2A48E794003B7834 /* PostScreenProgessSpinnerManager.swift */,
 				1691D0282A46C2FD00C5353D /* PostScreenPhotoManager.swift */,
 			);
@@ -178,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				1691D02B2A46C33E00C5353D /* PostScreenView.swift */,
+				0C32867D2A4903D3003B7834 /* ExerciseLoggerTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -204,12 +206,16 @@
 				0C3286712A48F61E003B7834 /* Friend Profile Screen */,
 				1691D0232A46C27200C5353D /* Post Screen */,
 				0C3286612A464201003B7834 /* Friend Requests */,
-				1B089AFA2A42498900F5DD5C /* DataModel */,
 				1B089AF32A4247D400F5DD5C /* ProgressSpinner */,
 				1B089AE22A42466A00F5DD5C /* RegisterScreen */,
 				1B089B142A4376D500F5DD5C /* FriendListScreen */,
 				1B089B2C2A46008B00F5DD5C /* ProfileScreen */,
 				1B089AD92A42463100F5DD5C /* MainScreen */,
+				1B089AFA2A42498900F5DD5C /* DataModel */,
+				1B089B182A4377A100F5DD5C /* Configs.swift */,
+				1B089B062A43638E00F5DD5C /* FirebaseAPICalls.swift */,
+				1B089B262A45EDFD00F5DD5C /* ImageViewUtils.swift */,
+				1B089B2D2A4625CB00F5DD5C /* AlertController.swift */,
 				1B089AB42A423EAF00F5DD5C /* AppDelegate.swift */,
 				1B089AB62A423EAF00F5DD5C /* SceneDelegate.swift */,
 				1B089ABA2A423EAF00F5DD5C /* Main.storyboard */,
@@ -217,11 +223,6 @@
 				1B089ABF2A423EB300F5DD5C /* LaunchScreen.storyboard */,
 				1B089AC22A423EB300F5DD5C /* Info.plist */,
 				1B089AC82A423F7D00F5DD5C /* GoogleService-Info.plist */,
-				1B089B062A43638E00F5DD5C /* FirebaseAPICalls.swift */,
-				1B089B182A4377A100F5DD5C /* Configs.swift */,
-				1B089B262A45EDFD00F5DD5C /* ImageViewUtils.swift */,
-				1B089B2D2A4625CB00F5DD5C /* AlertController.swift */,
-				1B6E420E2A49122200942B48 /* ButtonUtils.swift */,
 			);
 			path = CS4520FinalProject;
 			sourceTree = "<group>";
@@ -279,6 +280,7 @@
 			children = (
 				1B089B042A424BBF00F5DD5C /* User.swift */,
 				1B089B0C2A4375BE00F5DD5C /* Post.swift */,
+				0C32867B2A490096003B7834 /* Workout.swift */,
 				1B089B0E2A43765700F5DD5C /* Comment.swift */,
 			);
 			path = DataModel;
@@ -306,20 +308,10 @@
 		1B089B2C2A46008B00F5DD5C /* ProfileScreen */ = {
 			isa = PBXGroup;
 			children = (
-				1B6E42072A4907D400942B48 /* View */,
 				1B089B282A46007300F5DD5C /* ProfileViewController.swift */,
-				1B6E420A2A490D0A00942B48 /* EditPhotoManager.swift */,
-				1B6E420C2A490DD700942B48 /* ProfileProgressSpinnerManager.swift */,
-			);
-			path = ProfileScreen;
-			sourceTree = "<group>";
-		};
-		1B6E42072A4907D400942B48 /* View */ = {
-			isa = PBXGroup;
-			children = (
 				1B089B2A2A46008300F5DD5C /* ProfileScreenView.swift */,
 			);
-			path = View;
+			path = ProfileScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,16 +401,16 @@
 				0C3286762A48F66A003B7834 /* FriendProfileView.swift in Sources */,
 				1B089AFD2A424AB000F5DD5C /* RegisterViewController.swift in Sources */,
 				0C32866C2A48E794003B7834 /* PostScreenProgessSpinnerManager.swift in Sources */,
+				0C32867E2A4903D3003B7834 /* ExerciseLoggerTableViewCell.swift in Sources */,
 				0C32867A2A48F684003B7834 /* FriendProfileTableViewController.swift in Sources */,
 				1B089B132A4376D000F5DD5C /* FriendListViewController.swift in Sources */,
 				1B089AFF2A424AE900F5DD5C /* RegisterView.swift in Sources */,
 				1B089B2E2A4625CB00F5DD5C /* AlertController.swift in Sources */,
-				1B6E420B2A490D0A00942B48 /* EditPhotoManager.swift in Sources */,
 				1B089B252A45EB3500F5DD5C /* RegisterPhotoManager.swift in Sources */,
 				1B089B192A4377A100F5DD5C /* Configs.swift in Sources */,
+				0C3286802A490A85003B7834 /* ExerciseLoggerController.swift in Sources */,
 				1691D0252A46C28800C5353D /* PostScreenViewController.swift in Sources */,
 				1B089AB92A423EAF00F5DD5C /* ViewController.swift in Sources */,
-				1B6E420D2A490DD700942B48 /* ProfileProgressSpinnerManager.swift in Sources */,
 				1B089B0B2A4365D600F5DD5C /* ProgressSpinnerViewController.swift in Sources */,
 				0C3286782A48F678003B7834 /* FriendProfileViewController.swift in Sources */,
 				1B089AD82A4245F100F5DD5C /* RightBarButtonManager.swift in Sources */,
@@ -435,6 +427,7 @@
 				0C32866A2A469879003B7834 /* FriendRequestTableViewController.swift in Sources */,
 				0C3286702A48ED18003B7834 /* PostTableViewController.swift in Sources */,
 				1B089B292A46007400F5DD5C /* ProfileViewController.swift in Sources */,
+				0C32867C2A490096003B7834 /* Workout.swift in Sources */,
 				1B089B112A4376C300F5DD5C /* FriendListView.swift in Sources */,
 				1B089AB72A423EAF00F5DD5C /* SceneDelegate.swift in Sources */,
 				0C3286642A464234003B7834 /* FriendRequestsTableViewCell.swift in Sources */,
@@ -442,7 +435,6 @@
 				1B089B162A43773500F5DD5C /* FriendTableViewCell.swift in Sources */,
 				1B089B272A45EDFD00F5DD5C /* ImageViewUtils.swift in Sources */,
 				1B089B2B2A46008300F5DD5C /* ProfileScreenView.swift in Sources */,
-				1B6E420F2A49122200942B48 /* ButtonUtils.swift in Sources */,
 				1B089AD62A42443F00F5DD5C /* MainScreenView.swift in Sources */,
 				0C3286682A469799003B7834 /* FriendRequestViewController.swift in Sources */,
 			);

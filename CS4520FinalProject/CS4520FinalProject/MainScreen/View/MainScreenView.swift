@@ -12,7 +12,7 @@ class MainScreenView: UIView {
     var postTableView : UITableView!
     var labelText : UILabel!
     var postButton : UIButton!
-    var bottomAddView:UIView!
+    var bottomAddView: UIView!
 
     
     var buttonProfile : UIButton!

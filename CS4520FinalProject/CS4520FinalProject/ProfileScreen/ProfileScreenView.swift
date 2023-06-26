@@ -12,7 +12,6 @@ class ProfileScreenView: UIView {
     var labelEmail: UILabel!
     var labelPhoto: UILabel!
     var buttonTakePhoto: UIButton!
-    var buttonLogout: UIButton!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -21,8 +20,6 @@ class ProfileScreenView: UIView {
         setupLabelEmail()
         setuplabelPhoto()
         setupbuttonTakePhoto()
-        setupButtonLogout()
-        
         initConstraints()
     }
     
@@ -54,19 +51,11 @@ class ProfileScreenView: UIView {
         buttonTakePhoto.clipsToBounds = true
         buttonTakePhoto.contentHorizontalAlignment = .fill
         buttonTakePhoto.contentVerticalAlignment = .fill
+        buttonTakePhoto.showsMenuAsPrimaryAction = true
         buttonTakePhoto.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(buttonTakePhoto)
     }
-    
-    func setupButtonLogout() {
-        buttonLogout = UIButton(type: .system)
-        buttonLogout.setTitle("Logout", for: .normal)
-        buttonLogout.layer.borderWidth = 1
-        buttonLogout.layer.cornerRadius = 5
-        buttonLogout.titleLabel?.font = .boldSystemFont(ofSize: 16)
-        buttonLogout.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(buttonLogout)
-    }
+
     
     func initConstraints() {
         NSLayoutConstraint.activate([
@@ -83,12 +72,6 @@ class ProfileScreenView: UIView {
             
             labelPhoto.topAnchor.constraint(equalTo: buttonTakePhoto.bottomAnchor, constant: 12),
             labelPhoto.centerXAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerXAnchor),
-            
-            buttonLogout.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -50),
-            buttonLogout.centerXAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerXAnchor),
-            buttonLogout.widthAnchor.constraint(equalToConstant: 60),
-            buttonLogout.heightAnchor.constraint(equalToConstant: 30)
-            
         ])
     }
 }
