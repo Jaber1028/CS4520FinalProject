@@ -302,3 +302,24 @@ extension FriendProfileViewController {
             })
     }
 }
+
+extension ProfileViewController {
+    //MARK: We set the name of the user after we create the account...
+    func updateProfilePicture(photoURL: URL?){
+        let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+        changeRequest?.photoURL = photoURL
+        
+        changeRequest?.commitChanges(completion: {(error) in
+            if error == nil{
+                //MARK: the profile update is successful...
+                
+                //MARK: hide the progress indicator...
+                self.hideActivityIndicator()
+                self.onCancelButtonAction()
+            }else{
+                //MARK: there was an error updating the profile...
+                print("Error occured: \(String(describing: error))")
+            }
+        })
+    }
+}

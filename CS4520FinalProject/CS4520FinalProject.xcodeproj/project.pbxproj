@@ -54,6 +54,9 @@
 		1B089B292A46007400F5DD5C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B089B282A46007300F5DD5C /* ProfileViewController.swift */; };
 		1B089B2B2A46008300F5DD5C /* ProfileScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B089B2A2A46008300F5DD5C /* ProfileScreenView.swift */; };
 		1B089B2E2A4625CB00F5DD5C /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B089B2D2A4625CB00F5DD5C /* AlertController.swift */; };
+		1B6E420B2A490D0A00942B48 /* EditPhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6E420A2A490D0A00942B48 /* EditPhotoManager.swift */; };
+		1B6E420D2A490DD700942B48 /* ProfileProgressSpinnerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6E420C2A490DD700942B48 /* ProfileProgressSpinnerManager.swift */; };
+		1B6E420F2A49122200942B48 /* ButtonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6E420E2A49122200942B48 /* ButtonUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +104,9 @@
 		1B089B282A46007300F5DD5C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		1B089B2A2A46008300F5DD5C /* ProfileScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenView.swift; sourceTree = "<group>"; };
 		1B089B2D2A4625CB00F5DD5C /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		1B6E420A2A490D0A00942B48 /* EditPhotoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPhotoManager.swift; sourceTree = "<group>"; };
+		1B6E420C2A490DD700942B48 /* ProfileProgressSpinnerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileProgressSpinnerManager.swift; sourceTree = "<group>"; };
+		1B6E420E2A49122200942B48 /* ButtonUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +221,7 @@
 				1B089B182A4377A100F5DD5C /* Configs.swift */,
 				1B089B262A45EDFD00F5DD5C /* ImageViewUtils.swift */,
 				1B089B2D2A4625CB00F5DD5C /* AlertController.swift */,
+				1B6E420E2A49122200942B48 /* ButtonUtils.swift */,
 			);
 			path = CS4520FinalProject;
 			sourceTree = "<group>";
@@ -299,10 +306,20 @@
 		1B089B2C2A46008B00F5DD5C /* ProfileScreen */ = {
 			isa = PBXGroup;
 			children = (
+				1B6E42072A4907D400942B48 /* View */,
 				1B089B282A46007300F5DD5C /* ProfileViewController.swift */,
-				1B089B2A2A46008300F5DD5C /* ProfileScreenView.swift */,
+				1B6E420A2A490D0A00942B48 /* EditPhotoManager.swift */,
+				1B6E420C2A490DD700942B48 /* ProfileProgressSpinnerManager.swift */,
 			);
 			path = ProfileScreen;
+			sourceTree = "<group>";
+		};
+		1B6E42072A4907D400942B48 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1B089B2A2A46008300F5DD5C /* ProfileScreenView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -396,10 +413,12 @@
 				1B089B132A4376D000F5DD5C /* FriendListViewController.swift in Sources */,
 				1B089AFF2A424AE900F5DD5C /* RegisterView.swift in Sources */,
 				1B089B2E2A4625CB00F5DD5C /* AlertController.swift in Sources */,
+				1B6E420B2A490D0A00942B48 /* EditPhotoManager.swift in Sources */,
 				1B089B252A45EB3500F5DD5C /* RegisterPhotoManager.swift in Sources */,
 				1B089B192A4377A100F5DD5C /* Configs.swift in Sources */,
 				1691D0252A46C28800C5353D /* PostScreenViewController.swift in Sources */,
 				1B089AB92A423EAF00F5DD5C /* ViewController.swift in Sources */,
+				1B6E420D2A490DD700942B48 /* ProfileProgressSpinnerManager.swift in Sources */,
 				1B089B0B2A4365D600F5DD5C /* ProgressSpinnerViewController.swift in Sources */,
 				0C3286782A48F678003B7834 /* FriendProfileViewController.swift in Sources */,
 				1B089AD82A4245F100F5DD5C /* RightBarButtonManager.swift in Sources */,
@@ -423,6 +442,7 @@
 				1B089B162A43773500F5DD5C /* FriendTableViewCell.swift in Sources */,
 				1B089B272A45EDFD00F5DD5C /* ImageViewUtils.swift in Sources */,
 				1B089B2B2A46008300F5DD5C /* ProfileScreenView.swift in Sources */,
+				1B6E420F2A49122200942B48 /* ButtonUtils.swift in Sources */,
 				1B089AD62A42443F00F5DD5C /* MainScreenView.swift in Sources */,
 				0C3286682A469799003B7834 /* FriendRequestViewController.swift in Sources */,
 			);
