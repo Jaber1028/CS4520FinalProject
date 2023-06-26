@@ -12,12 +12,10 @@ struct Post: Codable{
     @DocumentID var id: String?
     var caption: String
     var image: URL?
-    var workout = [Workout]()
     
-    init(id: String? = nil, caption: String, image: URL? = nil, workout: [Workout]) {
+    init(id: String? = nil, caption: String, image: URL? = nil) {
         self.id = id
         self.caption = caption
         self.image = image
-        self.workout = workout
     }
 }

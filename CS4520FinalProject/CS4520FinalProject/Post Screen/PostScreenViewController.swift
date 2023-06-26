@@ -12,6 +12,7 @@ import FirebaseStorage
 
 class PostScreenViewController: UIViewController {
     
+    
     let postView = PostScreenView()
     
     var delegate: ViewController!
@@ -24,8 +25,6 @@ class PostScreenViewController: UIViewController {
     
     let storage = Storage.storage()
     
-    var exercises = [Workout]()
-    
     override func loadView() {
         view = postView
     }
@@ -37,42 +36,14 @@ class PostScreenViewController: UIViewController {
         
         postView.buttonTakePhoto.menu = getMenuImagePicker()
         postView.buttonCreatePost.addTarget(self,action: #selector(onCreatePost), for: .touchUpInside)
-        postView.buttonAddExercise.addTarget(self, action: #selector(onAddButtonTapped), for: .touchUpInside)
-
+        
         
         //MARK: recognizing the taps on the app screen, not the keyboard...
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboardOnTap))
         view.addGestureRecognizer(tapRecognizer)
         
-        postView.tableViewExerciseLogger.delegate = self
-        postView.tableViewExerciseLogger.dataSource = self
-        postView.tableViewExerciseLogger.separatorStyle = .none
-        
-
-        print(exercises.count)
-        
-        
     }
     
-    @objc func onAddButtonTapped() {
-        if let uwExercise = postView.textFieldExercise.text,
-           let uwWeight = postView.textFieldWeight.text,
-           let uwSets = postView.textFieldSets.text,
-           let uwReps = postView.textFieldReps.text {
-            if uwExercise.isEmpty || uwWeight.isEmpty || uwSets.isEmpty || uwReps.isEmpty {
-                AlertController().alertMissingField(self.delegate)
-            } else {
-                let workout = Workout(exercise: uwExercise, weight: Int(uwWeight)!, sets: Int(uwSets)!, reps: Int(uwReps)!)
-                self.exercises.append(workout)
-                postView.tableViewExerciseLogger.reloadData()
-                postView.textFieldExercise.text = ""
-                postView.textFieldWeight.text = ""
-                postView.textFieldSets.text = ""
-                postView.textFieldReps.text = ""
-            }
-        }
-    }
-
     
     //MARK: Hide Keyboard...
     @objc func hideKeyboardOnTap(){
@@ -81,10 +52,9 @@ class PostScreenViewController: UIViewController {
     }
     
     
-    // **************** Needs to check for empty photo here still!
     @objc func onCreatePost(){
         if let description = postView.textFieldDesc.text {
-            if description.isEmpty {
+            if pickedImage == nil || description.isEmpty {
                 AlertController().alertMissingField(self)
             }
                 else {
@@ -130,9 +100,5 @@ class PostScreenViewController: UIViewController {
         
         photoPicker.delegate = self
         present(photoPicker, animated: true, completion: nil)
-    }
-    
-    @objc func onTapOutsideAlert(){
-        self.dismiss(animated: true)
     }
 }

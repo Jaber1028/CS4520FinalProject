@@ -41,8 +41,13 @@ class FriendRequestViewController: UIViewController {
         
     }
 
+    
     @objc func onTapOutsideAlert(){
         self.dismiss(animated: true)
     }
+
+
+
+    
 
 }

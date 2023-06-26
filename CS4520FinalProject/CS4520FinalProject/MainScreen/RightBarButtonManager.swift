@@ -12,12 +12,12 @@ extension ViewController{
     func setupRightBarButton(isLoggedin: Bool){
         if isLoggedin{
             //MARK: user is logged in...
-            let barText = UIBarButtonItem(
-                title: "Logout",
-                style: .plain,
-                target: self,
-                action: #selector(onLogOutBarButtonTapped)
-            )
+//            let barText = UIBarButtonItem(
+//                title: "Logout",
+//                style: .plain,
+//                target: self,
+//                action: #selector(onLogOutBarButtonTapped)
+//            )
             
             let addFriend = UIBarButtonItem(image: UIImage(systemName: "person.2.fill"), style: .plain, target: self, action: #selector(addFriendButtonAction))
             
@@ -33,7 +33,7 @@ extension ViewController{
             let profile = UIBarButtonItem(customView: mainScreenView.buttonProfile)
             
             self.navigationItem.leftBarButtonItem = addFriend
-            self.navigationItem.rightBarButtonItems = [profile, barText]
+            self.navigationItem.rightBarButtonItem = profile
             
         }else{
             //MARK: not logged in...
@@ -121,11 +121,14 @@ extension ViewController{
         self.dismiss(animated: true)
     }
     
-    @objc func onLogOutBarButtonTapped(){
+    func logoutCurrAuth(){
         let logoutAlert = UIAlertController(title: "Logging out!", message: "Are you sure want to log out?", preferredStyle: .actionSheet)
         logoutAlert.addAction(UIAlertAction(title: "Yes, log out!", style: .default, handler: {(_) in
                 do{
                     try Auth.auth().signOut()
+                    self.posts.removeAll()
+                    self.mainScreenView.postTableView.reloadData()
+                    
                 }catch{
                     print("Error occured!")
                 }

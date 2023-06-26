@@ -11,16 +11,7 @@ class PostScreenView: UIView {
     
     var textFieldDesc: UITextView!
     var buttonCreatePost: UIButton!
-    var labelDesc: UILabel!
-    var tableViewExerciseLogger: UITableView!
-    
-    var textFieldExercise: UITextField!
-    var textFieldWeight: UITextField!
-    var textFieldSets: UITextField!
-    var textFieldReps: UITextField!
-    
-    var buttonAddExercise: UIButton!
-
+    var labelDesc:UILabel!
     
     var buttonTakePhoto: UIButton!
     
@@ -32,15 +23,6 @@ class PostScreenView: UIView {
         setupbuttonTakePhoto()
         setupButtonCreatePost()
         setupLabelDesc()
-        setupTableViewExerciseLogger()
-        
-        setupTextFieldExercise()
-        setupTextFieldWeight()
-        setupTextFieldSets()
-        setupTextFieldReps()
-        
-        setupButtonAddExercise()
-        
         initConstraints()
     }
     
@@ -65,54 +47,8 @@ class PostScreenView: UIView {
         self.addSubview(textFieldDesc)
     }
     
-    func setupTableViewExerciseLogger() {
-        tableViewExerciseLogger = UITableView()
-        tableViewExerciseLogger.layer.borderWidth = 1
-        tableViewExerciseLogger.layer.cornerRadius = 3
-        tableViewExerciseLogger.register(ExerciseLoggerTableViewCell.self, forCellReuseIdentifier: Configs.tableViewExerciseLoggerID)
-        tableViewExerciseLogger.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(tableViewExerciseLogger)
-    }
     
-    func setupTextFieldExercise() {
-        textFieldExercise = UITextField()
-        textFieldExercise.placeholder = "Exercise"
-        textFieldExercise.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(textFieldExercise)
-    }
     
-    func setupTextFieldWeight() {
-        textFieldWeight = UITextField()
-        textFieldWeight.placeholder = "Weight"
-        textFieldWeight.keyboardType = .numberPad
-        textFieldWeight.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(textFieldWeight)
-    }
-    
-    func setupTextFieldSets() {
-        textFieldSets = UITextField()
-        textFieldSets.placeholder = "Sets"
-        textFieldSets.keyboardType = .numberPad
-        textFieldSets.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(textFieldSets)
-    }
-    
-    func setupTextFieldReps() {
-        textFieldReps = UITextField()
-        textFieldReps.placeholder = "Reps"
-        textFieldReps.keyboardType = .numberPad
-        textFieldReps.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(textFieldReps)
-    }
-
-    func setupButtonAddExercise() {
-        buttonAddExercise = UIButton(type: .system)
-        buttonAddExercise.setTitle("", for: .normal)
-        buttonAddExercise.setImage(UIImage(systemName: "plus.circle.fill"), for: .normal)
-        buttonAddExercise.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(buttonAddExercise)
-    }
-
     func setupbuttonTakePhoto(){
         buttonTakePhoto = UIButton(type: .system)
         buttonTakePhoto.setImage(UIImage(systemName: "camera.fill")?.withRenderingMode(.alwaysOriginal), for: .normal)
@@ -151,33 +87,7 @@ class PostScreenView: UIView {
             buttonTakePhoto.widthAnchor.constraint(equalToConstant: 100),
             buttonTakePhoto.heightAnchor.constraint(equalTo: buttonTakePhoto.widthAnchor),
             
-            tableViewExerciseLogger.topAnchor.constraint(equalTo: buttonTakePhoto.bottomAnchor, constant: 16),
-            tableViewExerciseLogger.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 8),
-            tableViewExerciseLogger.centerXAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerXAnchor),
-            tableViewExerciseLogger.heightAnchor.constraint(equalToConstant: 200),
-            
-            textFieldExercise.topAnchor.constraint(equalTo: tableViewExerciseLogger.bottomAnchor, constant: 4),
-            textFieldExercise.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 8),
-            textFieldExercise.widthAnchor.constraint(equalTo: self.safeAreaLayoutGuide.widthAnchor, multiplier: 0.5),
-            
-            textFieldWeight.centerYAnchor.constraint(equalTo: textFieldExercise.centerYAnchor),
-            textFieldWeight.leadingAnchor.constraint(equalTo: textFieldExercise.trailingAnchor, constant: 4),
-            textFieldWeight.widthAnchor.constraint(equalTo: self.safeAreaLayoutGuide.widthAnchor, multiplier: 0.15),
-            
-            textFieldSets.centerYAnchor.constraint(equalTo: textFieldWeight.centerYAnchor),
-            textFieldSets.leadingAnchor.constraint(equalTo: textFieldWeight.trailingAnchor, constant: 4),
-            textFieldSets.widthAnchor.constraint(equalTo: self.safeAreaLayoutGuide.widthAnchor, multiplier: 0.15),
-            
-            textFieldReps.centerYAnchor.constraint(equalTo: textFieldSets.centerYAnchor),
-            textFieldReps.leadingAnchor.constraint(equalTo: textFieldSets.trailingAnchor, constant: 4),
-            textFieldReps.widthAnchor.constraint(equalTo: self.safeAreaLayoutGuide.widthAnchor, multiplier: 0.15),
-
-            
-            buttonAddExercise.centerXAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerXAnchor),
-            buttonAddExercise.topAnchor.constraint(equalTo: textFieldExercise.bottomAnchor, constant: 8),
-
-            
-            labelDesc.topAnchor.constraint(equalTo: buttonAddExercise.bottomAnchor, constant: 16),
+            labelDesc.topAnchor.constraint(equalTo: buttonTakePhoto.bottomAnchor, constant: 16),
             labelDesc.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 8),
             
             textFieldDesc.topAnchor.constraint(equalTo: labelDesc.bottomAnchor, constant: 16),

@@ -13,8 +13,6 @@ class Configs{
     static let tableViewFriendRequestsID = "tableViewFriendRequestsID"
     static let tableViewPostId = "tableViewPostID"
     static let tableViewProfileFriendsID = "tableViewProfileFriendsID"
-    static let tableViewExerciseLoggerID = "tableViewExerciseLoggerID"
-    static let tableViewWorkoutID = "tableViewWorkoutID"
     
     static let defaultPicture = UIImage(systemName: "person.circle")
 }

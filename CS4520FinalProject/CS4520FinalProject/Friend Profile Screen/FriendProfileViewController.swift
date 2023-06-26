@@ -41,6 +41,8 @@ class FriendProfileViewController: UIViewController {
         }
         
         friendProfileView.labelName.text = currentUser.name
+        
+
     }
-    
+
 }
