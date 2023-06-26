@@ -52,10 +52,9 @@ class PostScreenViewController: UIViewController {
     }
     
     
-    // **************** Needs to check for empty photo here still!
     @objc func onCreatePost(){
         if let description = postView.textFieldDesc.text {
-            if description.isEmpty {
+            if pickedImage == nil || description.isEmpty {
                 AlertController().alertMissingField(self)
             }
                 else {
